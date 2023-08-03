@@ -1,29 +1,48 @@
 {
-	"login": 
+	"core": 
 		{
-			"username" : "",
-			"password" : ""
+			"username" : "test",
+			"password" : "",
+            "entrances" : [],
+            "name" : [],
+            "version" : "",
+            "trustedUsers" : []
 		},
-	"systemsettings": 
-		{
-			"version" : "version 1.5.1 Aphrodite",
-			"whatsnew" : "Revamped the ilike command | Use (.)help to see commands | Please tell a dev if you need assistance or have any bugs"
-		},
-	"radioShit" :
+	"radio" :
 		{
 			"radioURL" : "",
 			"broadcastURL" : ""
 		},
-		"entrances" :
-		{
-			"entrances" : ["hello", "hi", "sup bitches", "you all are gay", "now offically kosher!", "now offically halal! (kind of)", "I'm horny PM me :tp_1f62b:", "your savior is here", "Definetly not delict"]
-		},
-	"OtherInfo" :
+    "keys" :
+    {
+        "DeeplKey" : ""   
+    },
+	"functionSettings" :
 	{
-		"DeeplKey" : "",
-		"NewsKey" : "",
-		"name" : "",
 		"LogChat" : false,
-		"trustedUser" : []
+        "useHelp" : true,
+        "useFilesay" : true,
+        "useReadTime" : false,
+        "useReadDate" : false,
+        "useTimez" : false,
+        "useUCAL" : true,
+        "useGetLike" : false,
+        "useGetHate" : false,
+        "useReadLike" : false,
+        "useReadHate" : false,
+        "useBacklog" : true,
+        "useAutoBacklog" : true,
+        "useTranslations" : false,
+        "useUrbandict" : false,
+        "useVote" : true,
+        "useIssues" : true,
+        "useRules" : true,
+        "useSRule" : true,
+        "useMiniMods" : true,
+        "useRegUsers" : true,
+        "useWheelie" : true,
+        "useFight" : false,
+        "useZSH" : true,
+        "useCMessages" : false
 	}
 }

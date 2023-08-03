@@ -251,43 +251,6 @@ def filesay():
     for shit in contents:
         send_message(shit)
         time.sleep(3)
-# time
-
-
-def read_time():
-    now = datetime.datetime.now()
-    now = now.strftime("%H:%M:%S")
-    proper_time = str("The time in UTC 6 is " + str(now))
-    send_message(str(proper_time))
-# date
-
-
-def read_date():
-    print("date command recognized")
-    send_message(str(date.today()))
-# vaduz
-
-
-def get_vaduz_time():
-    print("vaduz command recogized")
-    utc_utc_vaduz = datetime.datetime.now(pytz.timezone('Europe/Vaduz'))
-    vaduzTime = utc_utc_vaduz.strftime('%d/%m/%Y %H:%M:%S %Z %z')
-    send_message(str(vaduzTime))
-# timezones
-
-
-def timez():
-    writeToLogs("INFO - [" + users + " used the timez command]")
-    goodies = str3.split(" ")
-    try:
-        timezone = goodies[1]
-        timezones = datetime.datetime.now(pytz.timezone(timezone))
-        timezonetime = timezones.strftime('%d/%m/%Y %H:%M:%S %Z %z')
-        send_message(str(timezonetime))
-    except Exception as e:
-        writeToLogs("ERROR - [" + users + " caused an error")
-        send_message(users + " you caused this error " + str(e))
-
 
 # station
 def get_station():
@@ -298,73 +261,6 @@ def get_station():
         send_message("The station is broadcasting")
     except:
         send_message("the station is not broadcasting")
-
-
-# UCAL
-
-
-# like
-
-
-def get_like():
-    bannedChars = ["['", "']", "{'", "'}", "."]
-    try:
-        goodies, thingTheyLike = str3.split(" ", maxsplit=1)
-        thingTheyLike.strip(bannedChars)
-    except:
-        pass
-    with open("json-files/likes.json", 'r') as f:
-        data = json.load(f)
-        if users in data:
-            data[users].append(thingTheyLike)
-            send_message("it's offical, " + users + " likes " + thingTheyLike)
-        else:
-            data[users] = [thingTheyLike]
-            send_message("It's offical, " + users + " likes " + thingTheyLike)
-    with open("json-files/likes.json", 'w') as f:
-        json.dump(data, f, indent=4)
-# hate
-
-
-def get_hate():
-    bannedChars = ["[", "]", "{", "}", "."]
-    try:
-        goodies, thingTheyLike = str3.split(" ", maxsplit=1)
-        thingTheyLike.strip(bannedChars)
-    except:
-        pass
-    else:
-        with open("json-files/hate.json", 'r') as f:
-            data = json.load(f)
-            if users in data:
-                data[users].append(thingTheyLike)
-                send_message("it's offical, " + users + " hates " + thingTheyLike)
-            else:
-                data[users] = [thingTheyLike]
-                send_message("It's offical, " + users + " hates " + thingTheyLike)
-        with open("json-files/hate.json", 'w') as f:
-            json.dump(data, f, indent=4)
-# read the likes
-
-
-def read_likes():
-    with open("json-files/likes.json", 'r') as f:
-        data = json.load(f)
-        if users in data:
-            send_message(users + " likes " + str(data[users]))
-        else:
-            send_message("sorry, you were not found in the file")
-# read the hates
-
-
-def read_hate():
-    with open("json-files/hate.json", 'r') as f:
-        data = json.load(f)
-        if users in data:
-            send_message(users + " hates " + str(data[users]))
-        else:
-            send_message("sorry, you were not found in the file")
-# backlog
 
 
 def assign_backlog():
