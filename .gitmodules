@@ -1,0 +1,3 @@
+[submodule "botversion"]
+	path = botversion
+	url = https://github.com/teenchatbot/botversion
