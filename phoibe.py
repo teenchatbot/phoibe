@@ -30,41 +30,6 @@ import hashlib
 import base64
 
 # get username and shit from the json file
-
-settingsfile = open("json-files/settings.json", "r")
-settingsdata = json.load(settingsfile)
-
-username = settingsdata['login']['username']
-password = settingsdata['login']['password']
-
-entrances = settingsdata['entrances']['entrances']
-
-
-def logchat():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    logchat = settingsdata['OtherInfo']['LogChat']
-    settingsfile.close()
-    return logchat
-
-
-def trustedUser():
-    settingsfile = open("json-files/settings.json")
-    settingsdata = json.load(settingsfile)
-    trustedUsers = settingsdata['OtherInfo']['trustedUser']
-    settingsfile.close()
-    return trustedUsers
-
-
-def get_version():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    version = settingsdata['systemsettings']['version']
-    settingsfile.close()
-    checkVersion()
-    return version
-
-
 def whatsnew():
     settingsfile = open("json-files/settings.json", "r")
     settingsdata = json.load(settingsfile)
@@ -88,21 +53,6 @@ def get_broadcastlink():
     settingsfile.close()
     return broadcastlink
 
-
-def get_name():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    name = settingsdata['OtherInfo']['name']
-    settingsfile.close()
-    return name
-
-
-def get_deeplkey():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    deeplkey = settingsdata['OtherInfo']['DeeplKey']
-    settingsfile.close()
-    return deeplkey
 # random stuff
 
 
@@ -173,54 +123,12 @@ browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[2]/div[
 print("entered the chat")
 
 
-def getVersion():
-    file = open("json-files/settings.json", "r")
-    data = json.load(file)
-    version = data['systemsettings']['version']
-    ver, version, codename = version.split(" ")
-    return version
-
-
-def saveVersion():
-    version = getVersion()
-    with open("version.txt", "r+") as f:
-        f.write(version)
-
-
-def checkVersion():
-    installedVersion = getVersion()
-    url = 'https://api.github.com/repos/teenchatbot/botversion/contents/version.txt'
-    req = requests.get(url)
-    if req.status_code == requests.codes.ok:
-        req = req.json()
-        content = base64.b64decode(req['content'])
-        content = content.decode()
-        ver, version, codename = content.split(" ")
-        print(version)
-        print(installedVersion)
-        if version == installedVersion:
-            send_message("your version is up to date")
-        else:
-            send_message("you need to update to " + version + ", " + "your version is " + installedVersion)
-    else:
-        print("content not found")
-
-
 # reading and stripping down the messages so that they can be proccesses by the bot
 def read_messages():
     raw_text = str(browser.find_elements(By.XPATH, '//*[@class="log-container may-transform"]')[-1].text)
     return raw_text
 # timer
 
-
-def timer(h, m, s, user):
-    finished = False
-    total_seconds = h * 3600 + m * 60 + s
-    while total_seconds > 0:
-        timer = datetime.timedelta(seconds=total_seconds)
-        time.sleep(1)
-        total_seconds -= 1
-    send_message("/runban " + user)
 # sending messages
 
 
@@ -228,16 +136,6 @@ def send_message(message):
     time.sleep(1)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/textarea').send_keys(message)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
-
-
-def err(errcode):
-    writeToLogs("ERROR - " + users + " " + errcode)
-    send_message(errcode)
-
-
-saveVersion()
-checkVersion()
-send_message(random.choice(entrances))
 
 # station
 def get_station():
@@ -291,7 +189,6 @@ def check_issue():
     with open("./syscrit/voting/issue.txt", "r") as f:
         line = f.readline()
         send_message(line)
-# hard blacklist
 
 
 def read_rules():
@@ -313,45 +210,6 @@ def srule():
     except IndexError:
         writeToLogs("ERROR - something went wrong with reading a specific line from a file")
         send_message("are you possibly using the wrong command? This one is for reading a specific rule, not all of them")
-# read the mini mods
-
-
-def read_mMods():
-    f = open("./syscrit/people/minimods.txt", "r")
-    lin = f.read()
-    lines = lin.split('\n')
-    return lines
-# mini mod test
-
-
-def mmtest():
-    successful = False
-    if users in mini_mod:
-        send_message("test is successful")
-        successful = True
-    else:
-        send_message("you are not permitted to use this command")
-    return successful
-# read the registered users
-
-
-def read_reg_users():
-    f = open("./syscrit/people/regusers.txt", "r")
-    lin = str(f.read())
-    lines = lin.split('\n')
-    return lines
-# mini mod echo
-
-
-def echo():
-    goodies = str3.split("/")
-    try:
-        send_message(goodies[1])
-    except:
-        writeToLogs("ERROR - [" + users + " has caused an IndexError]")
-        send_message(users + " you have cause and IndexError, please read usage and try again")
-# mods
-
 
 def get_mods():
     f = open("./syscrit/people/mods.txt")
@@ -464,22 +322,6 @@ def fight():
         send_message("It's a tie")
 
 
-def arabic():
-    lang = langid.classify(str3)
-    translator = Translator(from_lang='ar', to_lang='en')
-    if lang[0] == 'ar':
-        translated = translator.translate(str3)
-        send_message(translated)
-
-
-def shell():
-    command = str3
-    command = command.replace(".sh ", "")
-    print(command)
-    com = subprocess.Popen((command), shell=True, stdout=subprocess.PIPE).stdout
-    com = com.read()
-    send_message(com.decode())
-# custom messages
 
 
 def custom_messages():

@@ -20,3 +20,17 @@ class blacklist:
         blacklist = str(blacklist.read)
         true_blacklist = blacklist.split("\n")
         return true_blacklist
+class minimods:
+    def mMods():
+        with open("./syscrit/people/minimods.txt") as f:
+            lin = f.read()
+            lines = lin.split("\n")
+            return lines
+    def test():
+        return "your test has been successful"
+class regUsers:
+    def regged():
+        with open("./syscrit/people/regusers.txt", "r") as f:
+            lin = str(f.read())
+            users = lin.split("\n")
+            return users
