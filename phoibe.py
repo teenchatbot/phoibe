@@ -238,19 +238,6 @@ def err(errcode):
 saveVersion()
 checkVersion()
 send_message(random.choice(entrances))
-# filesay
-
-
-def filesay():
-    try:
-        useless, url = str3.split(" ", maxsplit=1)
-    except:
-        pass
-
-    contents = requests.get(url).text.split("\n")
-    for shit in contents:
-        send_message(shit)
-        time.sleep(3)
 
 # station
 def get_station():
@@ -261,50 +248,6 @@ def get_station():
         send_message("The station is broadcasting")
     except:
         send_message("the station is not broadcasting")
-
-
-def assign_backlog():
-    goodies = str3.split(".")
-    goodies = goodies[1].split(" ")
-    try:
-        if goodies[1] != "read":
-            send_message("ok " + goodies[1] + " has been reported to the mods")
-            with open("./syscrit/people/backlog.txt", "a") as f:
-                f.write(f'{goodies[1]}\n')
-    except IndexError:
-        err("Unexpected IndexError, please see above command")
-        send_message("please read usage")
-# read the backlog
-
-
-def read_backlog():
-    usernames = open("./syscrit/people/backlog.txt", "r")
-    usernames = str(usernames.read())
-    usernames = usernames.replace("\n", " ")
-    send_message(usernames)
-# translate
-
-
-def get_transtlation():
-    auth_key = get_deeplkey()
-    goodies = str3.split(" ", maxsplit=1)
-    updatedGoodies = goodies[1].rsplit(" ", 1)
-    translator = deepl.Translator(auth_key)
-    try:
-        send_message(str(translator.translate_text(text=updatedGoodies[0], target_lang=updatedGoodies[1]).text))
-    except:
-        err("Unexpected translation error has occured")
-        send_message("please see the usages for proper language formatting")
-# auto backlog
-
-# soft blacklist
-
-
-def check_blacklist():
-    blacklists = open("./syscrit/people/blacklist.txt", "r")
-    blacklists = str(blacklists.read())
-    true_blacklist = blacklists.split("\n")
-    return true_blacklist
 # urban dictionary
 
 
@@ -330,39 +273,6 @@ def ud():
     except:
         writeToLogs("ERROR - [" + users + " caused an IndexError]")
         send_message(users + " you have caused an IndexError, please read the usage and try again")
-# voting
-
-
-def vote():
-    goodies = str3.split(" ")
-    try:
-        if goodies[1] == "yay":
-            with open("./syscrit/voting/yay.txt", "a") as f:
-                f.write(users + "\n")
-                send_message(users + " voted for")
-        if goodies[1] == "nay":
-            with open("./syscrit/voting/nay.txt", "a") as f:
-                f.write(users + "\n")
-                send_message(users + " voted against")
-    except:
-        err("Voting error, this user is either not allowed to vote or something else has happened")
-# counting votes
-
-
-def count_votes():
-    yay = []
-    nay = []
-    with open("./syscrit/voting/yay.txt", "r") as f:
-        lines = f.readlines()
-        for line in lines:
-            yay.append(line)
-    fixedyay = [*set(yay)]
-    with open("./syscrit/voting/nay.txt", "r") as f:
-        lines = f.readlines()
-        for line in lines:
-            nay.append(line)
-    fixednay = [*set(nay)]
-    send_message("yay: " + str(len(fixedyay)) + " nay: " + str(len(fixednay)))
 # writing to logs
 
 
@@ -374,41 +284,7 @@ def writeToLogs(message):
     hashpath = "./hashes/" + now2 + ".hash"
     with open(file, "a+") as f:
         f.write(str(now) + " - " + message +"\n")
-    hashfile(file, hashpath)
-
-# this is for hashing the files
-
-
-def hashfile(file, hashpath):
-    file = open(file, "rb")
-    file = file.read()
-    m = hashlib.sha3_512(file).hexdigest()
-    with open(hashpath, "w+") as f:
-        f.write(str(m))
-# check the hash
-
-
-def check_hash():
-    try:
-        now = datetime.datetime.now()
-        now = now.strftime('%Y-%m-%d')
-        file = "./logs/" + now + ".log"
-        hashpath = "./hashes/" + now + ".hash"
-        try:
-            hashpath = open(hashpath, "r")
-        except:
-            hashpath = "woogly"
-            send_message("there was a rare error that occured with log validation")
-        hashpath = hashpath.read(128)
-        file = open(file, "rb")
-        file = file.read()
-        m = hashlib.sha3_512(file).hexdigest()
-        if hashpath != str(m):
-            send_message("THE LOG HAS FAILED ITS VALIDATION CHECK, SOMEONE HAS TAMPERED WITH THE LOG FILE")
-            writeToLogs("ERROR ERROR ERROR - logs failed validation check")
-    except:
-        send_message("something has happened and Reid is too lazy to fix it")
-
+    # internal.hashes.hash(file) is going to go here
 
 # checking the issues
 def check_issue():
@@ -416,14 +292,6 @@ def check_issue():
         line = f.readline()
         send_message(line)
 # hard blacklist
-
-
-def check_Hblacklist():
-    blacklists = open("./syscrit/people/hard_blacklist.txt", "r")
-    blacklists = str(blacklists.read())
-    true_Hblacklist = blacklists.split("\n")
-    return true_Hblacklist
-# read the rules
 
 
 def read_rules():
@@ -594,30 +462,6 @@ def fight():
         send_message(un2 + " won this fight")
     if basescore1 == basescore2:
         send_message("It's a tie")
-# muting people
-
-
-def mute():
-    messages = []
-    file = open("mute.txt", "r")
-    lin = file.readline()
-    lines = lin.split("\n")
-    for linesx in lines:
-        if users in lines:
-            messages = browser.find_elements(By.XPATH, '//*[@class="message-tooltip show-on-hover"]')
-            e = browser.find_elements(By.XPATH, '//*[@class="text_wrapper"]')
-            e = e[-1]
-            a.move_to_element(e).perform()
-            f = browser.find_elements(By.XPATH, '//*[@class="btn btn--flat btn--icon"]')[-1]
-            a.move_to_element(f)
-            a.click()
-            fuckingwork()
-
-
-def fuckingwork():
-    element = WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[@class='list__tile__title' and text()='Delete Message']")))
-# Click on the element
-    a.click(element)
 
 
 def arabic():
