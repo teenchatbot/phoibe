@@ -1,5 +1,6 @@
 import datetime
-# TODO: going to have to import the hash functions to do this
+import internal
+
 
 
 class logs:
@@ -8,5 +9,7 @@ class logs:
         time = now1.strftime('%Y-%m-%d %H:%M:%S')
         date = now1.strftime('%Y-%m-%d')
         file = "./logs/" + date + ".log"
+        hashpath = "./hashes/" + date + ".hash"
         with open(file, "a+") as f:
             f.write(str(time) + " - " + "message" + "\n")
+            internal.hashes.hashfile(file, hashpath)
