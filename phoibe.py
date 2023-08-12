@@ -3,31 +3,28 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import selenium
 import time
-import datetime
-from datetime import date
-import pytz
 import random
-import socket
-import urllib3
-import urllib3.exceptions
-import threading
-import deepl
-# from newsapi import NewsApiClient
-import re
-import requests
-import smtplib
 import json
-# from win32gui import GetWindowText, GetForegroundWindow
-from translate import Translator
-import langid
-import os
-import subprocess
-import hashlib
-import base64
+from functions import settings
+from functions import time as fTime
+from functions import filesay
+from functions import feelings
+from functions import fun
+from functions import internal
+from functions import internalFunctions
+from functions import moderation
+from functions import rules
+from functions import translation
+from functions import voting
+from functions import wheelie
+
+
+
+
+
+
+
 
 # get username and shit from the json file
 def whatsnew():
@@ -103,8 +100,8 @@ time.sleep(5)
 # access y99
 browser.find_element(By.CLASS_NAME, 'blue--text.login-instead').click()
 # user and password
-browser.find_element(By.CLASS_NAME, 'input-username').send_keys(username)
-browser.find_element(By.CLASS_NAME, 'input-username.mt-1').send_keys(password)
+browser.find_element(By.CLASS_NAME, 'input-username').send_keys(settings.core.username)
+browser.find_element(By.CLASS_NAME, 'input-username.mt-1').send_keys(settings.core.password)
 browser.find_element(By.CLASS_NAME, 'mx-0.btn.btn--large.btn--depressed.e4jtrd').click()
 print("Logged in")
 # get past staging page
@@ -127,13 +124,39 @@ print("entered the chat")
 def read_messages():
     raw_text = str(browser.find_elements(By.XPATH, '//*[@class="log-container may-transform"]')[-1].text)
     return raw_text
-# timer
-
-# sending messages
 
 
 def send_message(message):
-    time.sleep(1)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/textarea').send_keys(message)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
+
+userBuffer = ""
+mesBuffer = ""
+send_message("This is a development build of phoibe")
+while True:
+    try:
+
+        raw = read_messages()
+        raw = raw.split("\n")
+        if len(raw) == 3:
+            raw.pop(1)
+        try:
+            username = raw[0]
+            message = raw[1]
+        except IndexError:
+            message = raw[0]
+            username = userBuffer
+            pass
+        if username == "":
+            username = userBuffer
+        if username != "":
+            userBuffer = username
+        if message != mesBuffer:
+            if settings.miscSettings.logchat is True:
+                internalFunctions.logs.writeToLogs(message, username)
+            print("[" + username + "]")
+            print(message)
+            mesBuffer = message
+    except KeyboardInterrupt():
+        print("interrupt recieved")

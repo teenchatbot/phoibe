@@ -1,6 +1,5 @@
 import deepl
-import settings
-
+from functions import settings
 
 key = settings.keys.deeplKey
 

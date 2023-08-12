@@ -1,5 +1,4 @@
 import datetime
-import date
 import pytz
 
 # these sets of functions just get all the time related crap

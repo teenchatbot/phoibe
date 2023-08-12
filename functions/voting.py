@@ -55,13 +55,13 @@ class multi:
                     f.write(username + "\n")
             else:
                 return "you have already voted silly goose"
-            except:
-                return "an error has occured"
+        except:
+            return "an error has occured"
     def results():
         with open("json-files/elect.json", "r") as file:
             data = json.load(file)
             data = data['canidates']
-            sorted = dict(sorted(data.items(), key=lambda x: x[1], reverse=True))
+            sortedRes = dict(sorted(data.items(), key=lambda x: x[1], reverse=True))
             return sorted
     def ballot():
         with open("./syscrit/voting/ballot.txt", "r") as f:
