@@ -1,5 +1,13 @@
 import json
 
+# !!!IMPORTANT!!! if you are just browsing these files, this is not the settintgs file, that is settings.json
+
+
+
+
+
+
+
 # the overarching settings file
 with open("json-files/settings.json", "r") as f:
     settingsdata = json.load(f)
@@ -46,3 +54,7 @@ class funcSettings:
 
 class keys:
     deeplKey = settingsdata['keys']['DeeplKey']
+
+
+class moderators:
+    minimods = settingsdata['moderation']['miniMods']

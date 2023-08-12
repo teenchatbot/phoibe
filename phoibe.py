@@ -30,41 +30,6 @@ import hashlib
 import base64
 
 # get username and shit from the json file
-
-settingsfile = open("json-files/settings.json", "r")
-settingsdata = json.load(settingsfile)
-
-username = settingsdata['login']['username']
-password = settingsdata['login']['password']
-
-entrances = settingsdata['entrances']['entrances']
-
-
-def logchat():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    logchat = settingsdata['OtherInfo']['LogChat']
-    settingsfile.close()
-    return logchat
-
-
-def trustedUser():
-    settingsfile = open("json-files/settings.json")
-    settingsdata = json.load(settingsfile)
-    trustedUsers = settingsdata['OtherInfo']['trustedUser']
-    settingsfile.close()
-    return trustedUsers
-
-
-def get_version():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    version = settingsdata['systemsettings']['version']
-    settingsfile.close()
-    checkVersion()
-    return version
-
-
 def whatsnew():
     settingsfile = open("json-files/settings.json", "r")
     settingsdata = json.load(settingsfile)
@@ -88,21 +53,6 @@ def get_broadcastlink():
     settingsfile.close()
     return broadcastlink
 
-
-def get_name():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    name = settingsdata['OtherInfo']['name']
-    settingsfile.close()
-    return name
-
-
-def get_deeplkey():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    deeplkey = settingsdata['OtherInfo']['DeeplKey']
-    settingsfile.close()
-    return deeplkey
 # random stuff
 
 
@@ -173,54 +123,12 @@ browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[2]/div[
 print("entered the chat")
 
 
-def getVersion():
-    file = open("json-files/settings.json", "r")
-    data = json.load(file)
-    version = data['systemsettings']['version']
-    ver, version, codename = version.split(" ")
-    return version
-
-
-def saveVersion():
-    version = getVersion()
-    with open("version.txt", "r+") as f:
-        f.write(version)
-
-
-def checkVersion():
-    installedVersion = getVersion()
-    url = 'https://api.github.com/repos/teenchatbot/botversion/contents/version.txt'
-    req = requests.get(url)
-    if req.status_code == requests.codes.ok:
-        req = req.json()
-        content = base64.b64decode(req['content'])
-        content = content.decode()
-        ver, version, codename = content.split(" ")
-        print(version)
-        print(installedVersion)
-        if version == installedVersion:
-            send_message("your version is up to date")
-        else:
-            send_message("you need to update to " + version + ", " + "your version is " + installedVersion)
-    else:
-        print("content not found")
-
-
 # reading and stripping down the messages so that they can be proccesses by the bot
 def read_messages():
     raw_text = str(browser.find_elements(By.XPATH, '//*[@class="log-container may-transform"]')[-1].text)
     return raw_text
 # timer
 
-
-def timer(h, m, s, user):
-    finished = False
-    total_seconds = h * 3600 + m * 60 + s
-    while total_seconds > 0:
-        timer = datetime.timedelta(seconds=total_seconds)
-        time.sleep(1)
-        total_seconds -= 1
-    send_message("/runban " + user)
 # sending messages
 
 
@@ -228,29 +136,6 @@ def send_message(message):
     time.sleep(1)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/textarea').send_keys(message)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
-
-
-def err(errcode):
-    writeToLogs("ERROR - " + users + " " + errcode)
-    send_message(errcode)
-
-
-saveVersion()
-checkVersion()
-send_message(random.choice(entrances))
-# filesay
-
-
-def filesay():
-    try:
-        useless, url = str3.split(" ", maxsplit=1)
-    except:
-        pass
-
-    contents = requests.get(url).text.split("\n")
-    for shit in contents:
-        send_message(shit)
-        time.sleep(3)
 
 # station
 def get_station():
@@ -261,50 +146,6 @@ def get_station():
         send_message("The station is broadcasting")
     except:
         send_message("the station is not broadcasting")
-
-
-def assign_backlog():
-    goodies = str3.split(".")
-    goodies = goodies[1].split(" ")
-    try:
-        if goodies[1] != "read":
-            send_message("ok " + goodies[1] + " has been reported to the mods")
-            with open("./syscrit/people/backlog.txt", "a") as f:
-                f.write(f'{goodies[1]}\n')
-    except IndexError:
-        err("Unexpected IndexError, please see above command")
-        send_message("please read usage")
-# read the backlog
-
-
-def read_backlog():
-    usernames = open("./syscrit/people/backlog.txt", "r")
-    usernames = str(usernames.read())
-    usernames = usernames.replace("\n", " ")
-    send_message(usernames)
-# translate
-
-
-def get_transtlation():
-    auth_key = get_deeplkey()
-    goodies = str3.split(" ", maxsplit=1)
-    updatedGoodies = goodies[1].rsplit(" ", 1)
-    translator = deepl.Translator(auth_key)
-    try:
-        send_message(str(translator.translate_text(text=updatedGoodies[0], target_lang=updatedGoodies[1]).text))
-    except:
-        err("Unexpected translation error has occured")
-        send_message("please see the usages for proper language formatting")
-# auto backlog
-
-# soft blacklist
-
-
-def check_blacklist():
-    blacklists = open("./syscrit/people/blacklist.txt", "r")
-    blacklists = str(blacklists.read())
-    true_blacklist = blacklists.split("\n")
-    return true_blacklist
 # urban dictionary
 
 
@@ -330,39 +171,6 @@ def ud():
     except:
         writeToLogs("ERROR - [" + users + " caused an IndexError]")
         send_message(users + " you have caused an IndexError, please read the usage and try again")
-# voting
-
-
-def vote():
-    goodies = str3.split(" ")
-    try:
-        if goodies[1] == "yay":
-            with open("./syscrit/voting/yay.txt", "a") as f:
-                f.write(users + "\n")
-                send_message(users + " voted for")
-        if goodies[1] == "nay":
-            with open("./syscrit/voting/nay.txt", "a") as f:
-                f.write(users + "\n")
-                send_message(users + " voted against")
-    except:
-        err("Voting error, this user is either not allowed to vote or something else has happened")
-# counting votes
-
-
-def count_votes():
-    yay = []
-    nay = []
-    with open("./syscrit/voting/yay.txt", "r") as f:
-        lines = f.readlines()
-        for line in lines:
-            yay.append(line)
-    fixedyay = [*set(yay)]
-    with open("./syscrit/voting/nay.txt", "r") as f:
-        lines = f.readlines()
-        for line in lines:
-            nay.append(line)
-    fixednay = [*set(nay)]
-    send_message("yay: " + str(len(fixedyay)) + " nay: " + str(len(fixednay)))
 # writing to logs
 
 
@@ -374,56 +182,13 @@ def writeToLogs(message):
     hashpath = "./hashes/" + now2 + ".hash"
     with open(file, "a+") as f:
         f.write(str(now) + " - " + message +"\n")
-    hashfile(file, hashpath)
-
-# this is for hashing the files
-
-
-def hashfile(file, hashpath):
-    file = open(file, "rb")
-    file = file.read()
-    m = hashlib.sha3_512(file).hexdigest()
-    with open(hashpath, "w+") as f:
-        f.write(str(m))
-# check the hash
-
-
-def check_hash():
-    try:
-        now = datetime.datetime.now()
-        now = now.strftime('%Y-%m-%d')
-        file = "./logs/" + now + ".log"
-        hashpath = "./hashes/" + now + ".hash"
-        try:
-            hashpath = open(hashpath, "r")
-        except:
-            hashpath = "woogly"
-            send_message("there was a rare error that occured with log validation")
-        hashpath = hashpath.read(128)
-        file = open(file, "rb")
-        file = file.read()
-        m = hashlib.sha3_512(file).hexdigest()
-        if hashpath != str(m):
-            send_message("THE LOG HAS FAILED ITS VALIDATION CHECK, SOMEONE HAS TAMPERED WITH THE LOG FILE")
-            writeToLogs("ERROR ERROR ERROR - logs failed validation check")
-    except:
-        send_message("something has happened and Reid is too lazy to fix it")
-
+    # internal.hashes.hash(file) is going to go here
 
 # checking the issues
 def check_issue():
     with open("./syscrit/voting/issue.txt", "r") as f:
         line = f.readline()
         send_message(line)
-# hard blacklist
-
-
-def check_Hblacklist():
-    blacklists = open("./syscrit/people/hard_blacklist.txt", "r")
-    blacklists = str(blacklists.read())
-    true_Hblacklist = blacklists.split("\n")
-    return true_Hblacklist
-# read the rules
 
 
 def read_rules():
@@ -445,45 +210,6 @@ def srule():
     except IndexError:
         writeToLogs("ERROR - something went wrong with reading a specific line from a file")
         send_message("are you possibly using the wrong command? This one is for reading a specific rule, not all of them")
-# read the mini mods
-
-
-def read_mMods():
-    f = open("./syscrit/people/minimods.txt", "r")
-    lin = f.read()
-    lines = lin.split('\n')
-    return lines
-# mini mod test
-
-
-def mmtest():
-    successful = False
-    if users in mini_mod:
-        send_message("test is successful")
-        successful = True
-    else:
-        send_message("you are not permitted to use this command")
-    return successful
-# read the registered users
-
-
-def read_reg_users():
-    f = open("./syscrit/people/regusers.txt", "r")
-    lin = str(f.read())
-    lines = lin.split('\n')
-    return lines
-# mini mod echo
-
-
-def echo():
-    goodies = str3.split("/")
-    try:
-        send_message(goodies[1])
-    except:
-        writeToLogs("ERROR - [" + users + " has caused an IndexError]")
-        send_message(users + " you have cause and IndexError, please read usage and try again")
-# mods
-
 
 def get_mods():
     f = open("./syscrit/people/mods.txt")
@@ -594,48 +320,8 @@ def fight():
         send_message(un2 + " won this fight")
     if basescore1 == basescore2:
         send_message("It's a tie")
-# muting people
 
 
-def mute():
-    messages = []
-    file = open("mute.txt", "r")
-    lin = file.readline()
-    lines = lin.split("\n")
-    for linesx in lines:
-        if users in lines:
-            messages = browser.find_elements(By.XPATH, '//*[@class="message-tooltip show-on-hover"]')
-            e = browser.find_elements(By.XPATH, '//*[@class="text_wrapper"]')
-            e = e[-1]
-            a.move_to_element(e).perform()
-            f = browser.find_elements(By.XPATH, '//*[@class="btn btn--flat btn--icon"]')[-1]
-            a.move_to_element(f)
-            a.click()
-            fuckingwork()
-
-
-def fuckingwork():
-    element = WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[@class='list__tile__title' and text()='Delete Message']")))
-# Click on the element
-    a.click(element)
-
-
-def arabic():
-    lang = langid.classify(str3)
-    translator = Translator(from_lang='ar', to_lang='en')
-    if lang[0] == 'ar':
-        translated = translator.translate(str3)
-        send_message(translated)
-
-
-def shell():
-    command = str3
-    command = command.replace(".sh ", "")
-    print(command)
-    com = subprocess.Popen((command), shell=True, stdout=subprocess.PIPE).stdout
-    com = com.read()
-    send_message(com.decode())
-# custom messages
 
 
 def custom_messages():

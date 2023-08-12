@@ -44,5 +44,10 @@
         "useFight" : false,
         "useZSH" : true,
         "useCMessages" : false
-	}
+	},
+    "moderation" :
+    {
+        "backlogTriggers" : ["pm me", "hmu"],
+        "miniMods" : []
+    }
 }
