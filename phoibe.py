@@ -131,6 +131,7 @@ def send_message(message):
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
 
+send_message(internal.checkVersion.checkVersion())
 userBuffer = ""
 mesBuffer = ""
 send_message("This is a development build of phoibe")
@@ -158,5 +159,151 @@ while True:
             print("[" + username + "]")
             print(message)
             mesBuffer = message
+
+        # blacklist
+        if settings.moderation.useBlacklist is True:
+            checked = moderation.blacklist.check(username)
+            if checked is True:
+                message = ""
+                internalFunctions.logs.writeToLogs("WARN - " + username + " tried to use a command")
+        # commands
+
+        # filesay
+        if ".filesay" in message:
+            if username in settings.core.trustedUsers:
+                command, url = message.split(" ")
+                contents = filesay.filesay.filesay(url)
+                for thing in contents:
+                    time.sleep(3)
+                    send_message(thing)
+            else:
+                send_message("filesay was disabled")
+                internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # timezones
+        if ".timez" in message:
+            if settings.funcSettings.useTimez is True:
+                com, tz = message.split(" ")
+                send_message(fTime.time.timez(tz))
+            else:
+                send_message("timez was disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # wheelie
+        if ".wheelie" in message:
+            if settings.funcSettings.useWheelie is True:
+                com, com2 = message.split(" ")
+                resp = wheelie.wheelie.wheelie(com2)
+                for thing in resp:
+                    send_message(thing)
+                    time.sleep(3)
+            else:
+                send_message("wheelie has been disabled (this is stupid, turn it back on)")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # fight
+        if ".fight" in message:
+            if settings.funcSettings.useFight is True:
+                com, user1, user2 = message.split(" ")
+                send_message(fun.fight.fight(user1, user2))
+            else:
+                send_message("fight has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # custom messages
+        if settings.core.name in message:
+            if settings.funcSettings.useCMessages is True:
+                send_message(fun.messages.custom(username))
+        # urbandict
+        if ".urbandict" in message:
+            if settings.funcSettings.useUrbandict is True:
+                com, term = message.split(" ", maxsplit=1)
+                send_message(fun.urbandict.getDef(term))
+            else:
+                send_message("urbandict has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # rules
+        if ".rules" in message:
+            if settings.funcSettings.useRules is True:
+                rules = rules.rules.read()
+                for thing in rules:
+                    send_message(rules)
+                    time.sleep(3)
+            else:
+                send_message("rules was disabled (please change this)")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # specific rule
+        if ".srule" in message:
+            if settings.funcSettings.useSRule is True:
+                com, rule = message.split(" ")
+                send_message(rules.rules.srule(rule))
+            else:
+                send_message("srule has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # translation
+        if ".translate" in message:
+            if settings.funcSettings.useTranslations is True:
+                goodies = message.split(" ", maxsplit=1)
+                updatedGoodies = goodies[1].rsplit(" ", 1)
+                send_message(translation.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
+            else:
+                send_message("management has disabled translation")
+        # voice
+        if ".voice-vote" in message:
+            if settings.funcSettings.useVote is True:
+                if username in moderation.minimods.mMods():
+                    com, vote = message.split(" ")
+                    voting.voice.vote(username, vote),
+                    send_message(username + " has voted")
+                else:
+                    send_message("you are not allowed to use this command")
+            else:
+                send_message("voting has been disabled")
+        # clear voice
+        if ".voice-clear" in message:
+            if settings.funcSettings.useVote is True:
+                if username in settings.core.trustedUSers:
+                    voting.voice.clear()
+                else:
+                    send_message("you are not allowed to use this command")
+            else:
+                send_message("voting has been disabled")
+        # counting voice votes
+        if ".voice-count" in message:
+            if settings.funcSettings.useVote is True:
+                if username in settings.core.trustedUsers:
+                    votes = voting.voice.read()
+                    yays = votes[0]
+                    nays = votes[1]
+                    send_message("yays: " + yays + " | " + "nays: " + nays)
+                else:
+                    send_message("you are not allowed to use this command")
+            else:
+                send_message("voting has been disabled")
+        # canidate voting
+        if ".multi-vote" in message:
+            if settings.funcSettings.useVote is True:
+                if username in moderation.minimods.mMods():
+                    com, candidate = message.split(" ")
+                    voting.multi.castVote(username, candidate)
+                    send_message("you have voted")
+                else:
+                    send_message("you are not allowed to vote")
+            else:
+                send_message("voting has been disabled")
+        if ".issue" in message:
+            if settings.funcSettings.useVote is True:
+                send_message(voting.multi.issue)
+            else:
+                send_message("voting has been disabled")
+        if ".multi-results" in message:
+            if settings.funcSettings.useVote is True:
+                send_message(voting.multi.results())
+            else:
+                send_message("voting has been disabled")
+        if ".multi-ballot" in message:
+            if settings.funcSettings.useVote is True:
+                ballot = voting.multi.ballot()
+                for candidate in ballot:
+                    send_message(candidate)
+                    time.sleep(3)
+            else:
+                send_message("voting has been disabled")
     except KeyboardInterrupt():
         print("interrupt recieved")

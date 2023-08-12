@@ -1,12 +1,12 @@
 {
 	"core": 
 		{
-			"username" : "deepestthroats",
-			"password" : "Changeme1234",
+			"username" : "",
+			"password" : "",
             "entrances" : [],
-            "name" : [],
+            "name" : "",
             "version" : "version 2.0.0 Athena",
-            "trustedUsers" : ["Mikaelvussy"]
+            "trustedUsers" : [""]
 		},
 	"radio" :
 		{
@@ -19,12 +19,12 @@
     },
 	"functionSettings" :
 	{
-		"LogChat" : false,
+		"LogChat" : true,
         "useHelp" : true,
         "useFilesay" : true,
-        "useReadTime" : false,
+        "useReadTime" : true,
         "useReadDate" : false,
-        "useTimez" : false,
+        "useTimez" : true,
         "useUCAL" : true,
         "useGetLike" : false,
         "useGetHate" : false,
@@ -32,8 +32,8 @@
         "useReadHate" : false,
         "useBacklog" : true,
         "useAutoBacklog" : true,
-        "useTranslations" : false,
-        "useUrbandict" : false,
+        "useTranslations" : true,
+        "useUrbandict" : true,
         "useVote" : true,
         "useIssues" : true,
         "useRules" : true,
@@ -41,13 +41,14 @@
         "useMiniMods" : true,
         "useRegUsers" : true,
         "useWheelie" : true,
-        "useFight" : false,
+        "useFight" : true,
         "useZSH" : true,
-        "useCMessages" : false
+        "useCMessages" : true
 	},
     "moderation" :
     {
         "backlogTriggers" : ["pm me", "hmu"],
-        "miniMods" : []
+        "miniMods" : [],
+        "useBlacklist" : true
     }
 }

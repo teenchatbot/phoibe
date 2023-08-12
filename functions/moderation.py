@@ -15,11 +15,14 @@ class backlog:
         usernames = usernames.replace("\n", " ")
         return usernames
 class blacklist:
-    def check():
+    def check(username):
         blacklist = open("./syscrit/people/blacklist.txt", "r")
         blacklist = str(blacklist.read)
         true_blacklist = blacklist.split("\n")
-        return true_blacklist
+        if username in true_blacklist:
+            return True
+        else:
+            return False
 class minimods:
     def mMods():
         with open("./syscrit/people/minimods.txt") as f:
@@ -29,8 +32,11 @@ class minimods:
     def test():
         return "your test has been successful"
 class regUsers:
-    def regged():
+    def check(username):
         with open("./syscrit/people/regusers.txt", "r") as f:
             lin = str(f.read())
             users = lin.split("\n")
-            return users
+            if username in users:
+                return True
+            else:
+                return False

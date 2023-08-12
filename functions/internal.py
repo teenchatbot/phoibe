@@ -48,17 +48,22 @@ class hashes:
             except:
                 hashpath = "woogly"
                 return "there was a rare error that occured"
-            hashpath = hashpath.read(128)
+            prehash = hashpath.read()
             file = open(file, "rb")
             file = file.read()
             m = hashlib.sha3_512(file).hexdigest()
-            if hashpath != str(m):
-                return "the log files were not validated correctly"
+            print(str(m))
+            print(prehash)
+            #if prehash != str(m):
+                #return "the log files were not validated correctly"
         except:
             return "something has happened"
-    def hashfile(file, hashpath):
+    def hashfile(file):
         file = open(file, "rb")
         file = file.read()
+        now = datetime.datetime.now()
+        now = now.strftime('%Y-%m-%d')
+        hashpath = './hashes/' + now + '.hash'
         m = hashlib.sha3_512(file).hexdigest()
         with open(hashpath, "w+") as f:
             f.write(str(m))

@@ -51,5 +51,3 @@ class urbandict:
                 return "no definiontion found for the search term of " + term
         except:
             return "unknown error has occured"
-
-# hard blacklist

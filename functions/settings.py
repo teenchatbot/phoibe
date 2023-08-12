@@ -56,5 +56,6 @@ class keys:
     deeplKey = settingsdata['keys']['DeeplKey']
 
 
-class moderators:
+class moderation:
     minimods = settingsdata['moderation']['miniMods']
+    useBlacklist = settingsdata['moderation']['useBlacklist']
