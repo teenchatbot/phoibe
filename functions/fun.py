@@ -52,3 +52,4 @@ class urbandict:
         except:
             return "unknown error has occured"
 
+# hard blacklist
