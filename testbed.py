@@ -1,6 +1,4 @@
-from functions import settings as sets
-from functions import time
+from functions import internal
 
 
-print(time.time.read_time())
-print(sets.core.username)
+internal.checkVersion.checkVersion()
