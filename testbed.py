@@ -1,4 +1,3 @@
-from functions import internal
+from functions import fun
 
-
-internal.checkVersion.checkVersion()
+print(fun.urbandict.getDef("rusty trombone"))

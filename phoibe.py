@@ -137,41 +137,6 @@ def send_message(message):
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/textarea').send_keys(message)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
-# station
-def get_station():
-    print("station command recognized")
-    http = urllib3.PoolManager()
-    try:
-        resp = http.request("GET", get_broadcastlink())
-        send_message("The station is broadcasting")
-    except:
-        send_message("the station is not broadcasting")
-# urban dictionary
-
-
-def get_urban_dictionary_definition(term):
-    url = f"https://api.urbandictionary.com/v0/define?term={term}"
-    try:
-        response = requests.get(url)
-        data = response.json()
-        if "list" in data and len(data["list"]) > 0:
-            first_definition = data["list"][0]["definition"]
-            return first_definition
-        else:
-            return "No definition found."
-    except:
-        err("Unknown error has occured")
-
-
-def ud():
-    goodies = str3.split(" ", maxsplit=1)
-    try:
-        definition = get_urban_dictionary_definition(goodies[1])
-        send_message(str(definition))
-    except:
-        writeToLogs("ERROR - [" + users + " caused an IndexError]")
-        send_message(users + " you have caused an IndexError, please read the usage and try again")
-# writing to logs
 
 
 def writeToLogs(message):
@@ -211,11 +176,6 @@ def srule():
         writeToLogs("ERROR - something went wrong with reading a specific line from a file")
         send_message("are you possibly using the wrong command? This one is for reading a specific rule, not all of them")
 
-def get_mods():
-    f = open("./syscrit/people/mods.txt")
-    lin = f.read()
-    return lin
-# casting electoral votes
 
 
 def cast_vote():

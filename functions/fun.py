@@ -1,4 +1,6 @@
 import json
+import requests
+
 
 class fight:
     def fight(username1, username2):
@@ -36,3 +38,17 @@ class messages:
             return data['custom_messages'][username]
         else:
             return username + " what?"
+class urbandict:
+    def getDef(term):
+        url = f"https://api.urbandictionary.com/v0/define?term={term}"
+        try:
+            response = requests.get(url)
+            data = response.json()
+            if "list" in data and len(data["list"]) > 0:
+                firstDef = data["list"][0]["definition"]
+                return firstDef
+            else:
+                return "no definiontion found for the search term of " + term
+        except:
+            return "unknown error has occured"
+
