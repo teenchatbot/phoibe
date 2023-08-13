@@ -119,7 +119,10 @@ while True:
         if ".timez" in message:
             if settings.funcSettings.useTimez is True:
                 com, tz = message.split(" ")
-                send_message(fTime.time.timez(tz))
+                try:
+                    send_message(fTime.time.timez(tz))
+                except:
+                    send_message("you most likely misspelled the timezone")
             else:
                 send_message("timez was disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
@@ -231,6 +234,7 @@ while True:
         # issue
         if ".issue" in message:
             if settings.funcSettings.useVote is True:
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
                 send_message(voting.multi.issue)
             else:
                 send_message("voting has been disabled")
