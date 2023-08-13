@@ -26,7 +26,7 @@ class drink:
         with open("json-files/random.json", "r") as file:
             data = json.load(file)
             drinks = data['drinks']
-            return random.choice(drinks) + " " + username
+            return "pheebs sends " + username + " " + random.choice(drinks)
 class joke:
     def joke():
         with open("json-files/random.json") as file:
