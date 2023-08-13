@@ -48,7 +48,8 @@
         "useCuss" : true,
         "useInsults" : true,
         "useDrink" : true,
-        "useWew" : true
+        "useWew" : true,
+        "usePing" : true
 	},
     "moderation" :
     {
