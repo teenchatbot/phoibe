@@ -228,18 +228,21 @@ while True:
             else:
                 send_message("voting has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # issue
         if ".issue" in message:
             if settings.funcSettings.useVote is True:
                 send_message(voting.multi.issue)
             else:
                 send_message("voting has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # multi results
         if ".multi-results" in message:
             if settings.funcSettings.useVote is True:
                 send_message(voting.multi.results())
             else:
                 send_message("voting has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # multi ballot
         if ".multi-ballot" in message:
             if settings.funcSettings.useVote is True:
                 ballot = voting.multi.ballot()
@@ -252,23 +255,29 @@ while True:
         # random stuff
         if ".drink" in message:
             if settings.funcSettings.useDrink is True:
-                com, user = message.split(" ")
+                try:
+                    com, user = message.split(" ")
+                except IndexError:
+                    user = username
                 send_message(random.drink.drink(user))
             else:
                 send_message("drinking has been disabled, how sad")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # joke
         if ".joke" in message:
             if settings.funcSettings.useJokes is True:
                 send_message(random.joke.joke())
             else:
                 send_message("joking is not allowed in this tyrannical room")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # insult
         if ".insult" in message:
             if settings.funcSettings.useInsults is True:
                 send_message(random.insults.insult())
             else:
                 send_message("ok, this one kinda makes sense, but it's still disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # cuss
         if ".cuss" in message:
             if settings.funcSettings.useCuss is True:
                 send_message(random.cuss.cuss())
