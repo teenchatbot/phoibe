@@ -257,7 +257,7 @@ while True:
             if settings.funcSettings.useDrink is True:
                 try:
                     com, user = message.split(" ")
-                except ValueError():
+                except ValueError:
                     user = username
                 send_message(random.drink.drink(user))
             else:
