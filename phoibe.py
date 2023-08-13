@@ -296,7 +296,7 @@ while True:
         if ".ping" in message:
             if settings.funcSettings.usePing is True:
                 if settings.funcSettings.useUCAL is True:
-                    if UCAL.ucal.check(username, 5) is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Ping) is True:
                         send_message("pong")
                     else:
                         send_message("you do not have a high enough UCAL level")
