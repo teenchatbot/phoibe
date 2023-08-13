@@ -304,5 +304,7 @@ while True:
                     send_message("pong")
             else:
                 send_message("ping has been turned off")
+        # have ucal add all new users with abitrarily high number
+        UCAL.ucal.check(username, 99999)
     except KeyboardInterrupt():
         print("interrupt recieved")
