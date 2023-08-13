@@ -234,7 +234,6 @@ while True:
         # issue
         if ".issue" in message:
             if settings.funcSettings.useVote is True:
-            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
                 send_message(voting.multi.issue)
             else:
                 send_message("voting has been disabled")
