@@ -287,5 +287,11 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # wew
+        if ".wew" in message:
+            if settings.funcSettings.useWew is True:
+                send_message("what is that?")
+            else:
+                send_message("it was disabled, how sad")
     except KeyboardInterrupt():
         print("interrupt recieved")

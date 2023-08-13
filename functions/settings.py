@@ -54,7 +54,7 @@ class funcSettings:
     useCuss = settingsdata['functionSettings']['useCuss']
     useInsults = settingsdata['functionSettings']['useInsults']
     useDrink = settingsdata['functionSettings']['useDrink']
-
+    useWew = settingsdata['functionSettings']['useWew']
 
 class keys:
     deeplKey = settingsdata['keys']['DeeplKey']
