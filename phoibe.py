@@ -18,8 +18,8 @@ from functions import rules
 from functions import translation
 from functions import voting
 from functions import wheelie
-from functions import random
-
+from functions import Frandom
+from functions import UCAL
 
 # selinum shit
 
@@ -70,7 +70,7 @@ def send_message(message):
 
 userBuffer = ""
 mesBuffer = ""
-send_message(random.entrances.entrance())
+send_message(Frandom.entrances.entrance())
 while True:
     try:
 
@@ -262,28 +262,28 @@ while True:
                     com, user = message.split(" ")
                 except ValueError:
                     user = username
-                send_message(random.drink.drink(user))
+                send_message(Frandom.drink.drink(user))
             else:
                 send_message("drinking has been disabled, how sad")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # joke
         if ".joke" in message:
             if settings.funcSettings.useJokes is True:
-                send_message(random.joke.joke())
+                send_message(Frandom.joke.joke())
             else:
                 send_message("joking is not allowed in this tyrannical room")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # insult
         if ".insult" in message:
             if settings.funcSettings.useInsults is True:
-                send_message(random.insults.insult())
+                send_message(Frandom.insults.insult())
             else:
                 send_message("ok, this one kinda makes sense, but it's still disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # cuss
         if ".cuss" in message:
             if settings.funcSettings.useCuss is True:
-                send_message(random.cuss.cuss())
+                send_message(Frandom.cuss.cuss())
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
@@ -293,5 +293,16 @@ while True:
                 send_message("what is that?")
             else:
                 send_message("it was disabled, how sad")
+        if ".ping" in message:
+            if settings.funcSettings.usePing is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, 5) is True:
+                        send_message("pong")
+                    else:
+                        send_message("you do not have a high enough UCAL level")
+                else:
+                    send_message("pong")
+            else:
+                send_message("ping has been turned off")
     except KeyboardInterrupt():
         print("interrupt recieved")
