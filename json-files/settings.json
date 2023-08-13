@@ -3,7 +3,7 @@
 		{
 			"username" : "",
 			"password" : "",
-            "entrances" : [],
+            "entrances" : ["hello", "hi there", "hola"],
             "name" : "",
             "version" : "version 2.0.0 Hephaestus",
             "trustedUsers" : [""]
@@ -43,7 +43,11 @@
         "useWheelie" : true,
         "useFight" : true,
         "useZSH" : true,
-        "useCMessages" : true
+        "useCMessages" : true,
+        "useJokes" : true,
+        "useCuss" : true,
+        "useInsults" : true,
+        "useDrink" : true
 	},
     "moderation" :
     {

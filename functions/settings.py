@@ -50,6 +50,10 @@ class funcSettings:
     useFight = settingsdata['functionSettings']['useFight']
     useZSH = settingsdata['functionSettings']['useZSH']
     useCMessages = settingsdata['functionSettings']['useCMessages']
+    useJokes = settingsdata['functionSettings']['useJokes']
+    useCuss = settingsdata['functionSettings']['useCuss']
+    useInsults = settingsdata['functionSettings']['useInsults']
+    useDrink = settingsdata['functionSettings']['useDrink']
 
 
 class keys:

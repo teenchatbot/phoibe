@@ -18,71 +18,7 @@ from functions import rules
 from functions import translation
 from functions import voting
 from functions import wheelie
-
-
-
-
-
-
-
-
-# get username and shit from the json file
-def whatsnew():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    whatsnew = settingsdata['systemsettings']['whatsnew']
-    settingsfile.close()
-    return whatsnew
-
-
-def get_radio():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    radiolink = settingsdata['radioShit']['radioURL']
-    settingsfile.close()
-    return radiolink
-
-
-def get_broadcastlink():
-    settingsfile = open("json-files/settings.json", "r")
-    settingsdata = json.load(settingsfile)
-    broadcastlink = settingsdata['radioShit']['broadcastURL']
-    settingsfile.close()
-    return broadcastlink
-
-# random stuff
-
-
-def get_jokes():
-    file = open("json-files/random.json", "r")
-    data = json.load(file)
-    jokes = data['jokes']
-    joke = random.choice(jokes)
-    return joke
-
-
-def get_drink():
-    file = open("json-files/random.json", "r")
-    data = json.load(file)
-    drinks = data['drinks']
-    drink = random.choice(drinks)
-    return drink
-
-
-def get_cuss_word():
-    file = open("json-files/random.json", "r")
-    data = json.load(file)
-    words = data['cuss_words']
-    word = random.choice(words)
-    return word
-
-
-def get_insults():
-    file = open("json-files/random.json", "r")
-    data = json.load(file)
-    insults = data['insults']
-    insult = random.choice(insults)
-    return insult
+from functions import random
 
 
 # selinum shit
@@ -131,10 +67,10 @@ def send_message(message):
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
 
-send_message(internal.checkVersion.checkVersion())
+
 userBuffer = ""
 mesBuffer = ""
-send_message("This is a development build of phoibe")
+send_message(random.entrances.entrance())
 while True:
     try:
 
@@ -244,6 +180,7 @@ while True:
                 send_message(translation.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
             else:
                 send_message("management has disabled translation")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # voice
         if ".voice-vote" in message:
             if settings.funcSettings.useVote is True:
@@ -254,7 +191,8 @@ while True:
                 else:
                     send_message("you are not allowed to use this command")
             else:
-                send_message("voting has been disabled")
+                send_message("voting has been disabled")    
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # clear voice
         if ".voice-clear" in message:
             if settings.funcSettings.useVote is True:
@@ -264,6 +202,7 @@ while True:
                     send_message("you are not allowed to use this command")
             else:
                 send_message("voting has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # counting voice votes
         if ".voice-count" in message:
             if settings.funcSettings.useVote is True:
@@ -276,6 +215,7 @@ while True:
                     send_message("you are not allowed to use this command")
             else:
                 send_message("voting has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # canidate voting
         if ".multi-vote" in message:
             if settings.funcSettings.useVote is True:
@@ -287,16 +227,19 @@ while True:
                     send_message("you are not allowed to vote")
             else:
                 send_message("voting has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         if ".issue" in message:
             if settings.funcSettings.useVote is True:
                 send_message(voting.multi.issue)
             else:
                 send_message("voting has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         if ".multi-results" in message:
             if settings.funcSettings.useVote is True:
                 send_message(voting.multi.results())
             else:
                 send_message("voting has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         if ".multi-ballot" in message:
             if settings.funcSettings.useVote is True:
                 ballot = voting.multi.ballot()
@@ -305,5 +248,32 @@ while True:
                     time.sleep(3)
             else:
                 send_message("voting has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        # random stuff
+        if ".drink" in message:
+            if settings.funcSettings.useDrink is True:
+                com, user = message.split(" ")
+                send_message(random.drink.drink(user))
+            else:
+                send_message("drinking has been disabled, how sad")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        if ".joke" in message:
+            if settings.funcSettings.useJokes is True:
+                send_message(random.joke.joke())
+            else:
+                send_message("joking is not allowed in this tyrannical room")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        if ".insult" in message:
+            if settings.funcSettings.useInsults is True:
+                send_message(random.insults.insult())
+            else:
+                send_message("ok, this one kinda makes sense, but it's still disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+        if ".cuss" in message:
+            if settings.funcSettings.useCuss is True:
+                send_message(random.cuss.cuss())
+            else:
+                send_message("this command has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
     except KeyboardInterrupt():
         print("interrupt recieved")
