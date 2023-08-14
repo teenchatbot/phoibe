@@ -25,4 +25,7 @@ class ucal:
         with open("json-files/ucal.json") as file:
             data = json.load(file)
             if username not in data['people']:
-                print("username not in UCAL")
+                pass
+            else:
+                data['people'][username] = 0
+            
