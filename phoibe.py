@@ -291,15 +291,21 @@ while True:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.Vote) is True:
-                        com, candidate = message.split(" ")
-                        voting.multi.castVote(username, candidate)
-                        send_message("you have voted")
+                        try:
+                            com, candidate = message.split(" ")
+                            voting.multi.castVote(username, candidate)
+                            send_message("you have voted")
+                        except Exception as e:
+                            send_message(str(e))
                     else:
                         send_message("your ucal level is not high enough")
                 else:
-                    com, candidate = message.split(" ")
-                    voting.multi.castVote(username, candidate)
-                    send_message("you have voted")
+                    try:
+                        com, candidate = message.split(" ")
+                        voting.multi.castVote(username, candidate)
+                        send_message("you have voted")
+                    except Exception as e:
+                        send_message(str(e))
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
