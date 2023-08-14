@@ -179,7 +179,7 @@ while True:
                 if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.Urbandict) is True:
                         com, term = message.split(" ", maxsplit=1)
-                        send_message(fun.urbandict.getdef(term))
+                        send_message(fun.urbandict.getDef(term))
                     else:
                         send_message("your ucal level is not high enough")
                 else:
