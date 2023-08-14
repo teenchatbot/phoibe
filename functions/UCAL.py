@@ -18,6 +18,6 @@ class ucal:
     def raiseLevel(username, levels):
         with open("json-files/ucal.json", "r") as file:
             data = json.load(file)
-            data[username] = data['people'][username] + levels
+            data['people'][username] = data['people'][username] + levels
             with open("json-files/ucal.json", "w") as file:
                 json.dump(data, file, indent=4)
