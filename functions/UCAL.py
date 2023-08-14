@@ -5,7 +5,7 @@ class ucal:
     def check(username, commandLevel):
         with open("json-files/ucal.json", "r") as file:
             data = json.load(file)
-            if username not in data:
+            if username not in data['people']:
                 data['people'][username] = 0
                 with open("json-files/ucal.json", "w") as file:
                     json.dump(data, file, indent=4)
