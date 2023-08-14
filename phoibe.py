@@ -425,6 +425,19 @@ while True:
                     send_message("pong")
             else:
                 send_message("ping has been turned off")
+        if ".raiseLevel" in message:
+            if settings.funcSettings.useRaiseLevel is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.raiseLevel) is True:
+                        com, target, level = message.split(" ")
+                        UCAL.ucal.raiseLevel(target, level)
+                        send_message(target + "'s level has been raised by " + level)
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    send_message("UCAL is not used in this room")
+            else:
+                send_message("UCAL is not used in this room, you must like killing puppies")
         # have ucal add all new users with abitrarily high number
         UCAL.ucal.check(username, 99999)
     except KeyboardInterrupt():

@@ -2,12 +2,6 @@ import json
 
 # !!!IMPORTANT!!! if you are just browsing these files, this is not the settintgs file, that is settings.json
 
-
-
-
-
-
-
 # the overarching settings file
 with open("json-files/settings.json", "r") as f:
     settingsdata = json.load(f)
@@ -56,6 +50,9 @@ class funcSettings:
     useDrink = settingsdata['functionSettings']['useDrink']
     useWew = settingsdata['functionSettings']['useWew']
     usePing = settingsdata['functionSettings']['usePing']
+    useRaiseLevel = settingsdata['functionsSettings']['useRaiseLevel']
+
+
 class ucalLevels:
     Help = settingsdata['ucalLevels']['Help']
     Filsay = settingsdata['ucalLevels']['Filesay']
@@ -85,6 +82,9 @@ class ucalLevels:
     Drink = settingsdata['ucalLevels']['Drink']
     Wew = settingsdata['ucalLevels']['Wew']
     Ping = settingsdata['ucalLevels']['Ping']
+    raiseLevel = settingsdata['ucalLevels']['raiseLevel']
+
+
 class keys:
     deeplKey = settingsdata['keys']['DeeplKey']
 
