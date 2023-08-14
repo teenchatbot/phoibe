@@ -62,7 +62,7 @@ class multi:
             data = json.load(file)
             data = data['canidates']
             sortedRes = dict(sorted(data.items(), key=lambda x: x[1], reverse=True))
-            return sorted
+            return sortedRes
     def ballot():
         with open("./syscrit/voting/ballot.txt", "r") as f:
             file = f.read()
