@@ -106,26 +106,44 @@ while True:
 
         # filesay
         if ".filesay" in message:
-            if username in settings.core.trustedUsers:
-                command, url = message.split(" ")
-                contents = filesay.filesay.filesay(url)
-                for thing in contents:
-                    time.sleep(3)
-                    send_message(thing)
+            if settings.funcSettings.useFilsay is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Filsay) is True:
+                        command, url = message.split(" ")
+                        contents = filesay.filesay.filesay(url)
+                        for thing in contents:
+                            time.sleep(3)
+                            send_message(thing)
+                        com, tz = message.split(" ")
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    try:
+                        send_message(fTime.time.timez(tz))
+                    except:
+                        send_message("you most likely misspelled the timezone")
             else:
-                send_message("filesay was disabled")
-                internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+                send_message("this command has been disabled")
         # timezones
         if ".timez" in message:
             if settings.funcSettings.useTimez is True:
-                com, tz = message.split(" ")
-                try:
-                    send_message(fTime.time.timez(tz))
-                except:
-                    send_message("you most likely misspelled the timezone")
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Fight) is True:
+                        com, tz = message.split(" ")
+                        try:
+                            send_message(fTime.time.timez(tz))
+                        except:
+                            send_message("you most likely misspelled the timezone")
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    com, tz = message.split(" ")
+                    try:
+                        send_message(fTime.time.timez(tz))
+                    except:
+                        send_message("you most likely misspelled the timezone")
             else:
-                send_message("timez was disabled")
-            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+                send_message("this command has been disabled")
         # wheelie
         if ".wheelie" in message:
             if settings.funcSettings.useWheelie is True:
@@ -140,11 +158,17 @@ while True:
         # fight
         if ".fight" in message:
             if settings.funcSettings.useFight is True:
-                com, user1, user2 = message.split(" ")
-                send_message(fun.fight.fight(user1, user2))
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Fight) is True:
+                        com, user1, user2 = message.split(" ")
+                        send_message(fun.fight.fight(user1, user2))
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    com, user1, user2 = message.split(" ")
+                    send_message(fun.fight.fight(user1, user2))
             else:
-                send_message("fight has been disabled")
-            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+                send_message("this command has been disabled")
         # custom messages
         if settings.core.name in message:
             if settings.funcSettings.useCMessages is True:
@@ -152,138 +176,235 @@ while True:
         # urbandict
         if ".urbandict" in message:
             if settings.funcSettings.useUrbandict is True:
-                com, term = message.split(" ", maxsplit=1)
-                send_message(fun.urbandict.getDef(term))
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Urbandict) is True:
+                        com, term = message.split(" ", maxsplit=1)
+                        send_message(fun.urbandict.getdef(term))
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    com, term = message.split(" ", maxsplit=1)
+                    send_message(fun.urbandict.getdef(term))
             else:
-                send_message("urbandict has been disabled")
-            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+                send_message("this command has been disabled")
         # rules
         if ".rules" in message:
             if settings.funcSettings.useRules is True:
-                rules = rules.rules.read()
-                for thing in rules:
-                    send_message(rules)
-                    time.sleep(3)
+                if settings.funcSettings.useUcal is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Rules) is True:
+                        rules = rules.rules.read()
+                        for thing in rules:
+                            send_message(thing)
+                            time.sleep(3)
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    rules = rules.rules.read()
+                    for thing in rules:
+                        send_message(thing)
+                        time.sleep(3)
             else:
-                send_message("rules was disabled (please change this)")
+                send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # specific rule
         if ".srule" in message:
             if settings.funcSettings.useSRule is True:
-                com, rule = message.split(" ")
-                send_message(rules.rules.srule(rule))
+                if settings.funcSettings.useUcal is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.SRule) is True:
+                        com, rule = message.split(" ")
+                        send_message(rules.rules.srule(rule))
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    com, rule = message.split(" ")
+                    send_message(rules.rules.srule(rule))
             else:
                 send_message("srule has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # translation
         if ".translate" in message:
             if settings.funcSettings.useTranslations is True:
-                goodies = message.split(" ", maxsplit=1)
-                updatedGoodies = goodies[1].rsplit(" ", 1)
-                send_message(translation.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Translations) is True:
+                        goodies = message.split(" ", maxsplit=1)
+                        updatedGoodies = goodies[1].rsplit(" ", 1)
+                        send_message(translation.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    goodies = message.split(" ", maxsplit=1)
+                    updatedGoodies = goodies[1].rsplit(" ", 1)
+                    send_message(translation.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
             else:
-                send_message("management has disabled translation")
-            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+                send_message("this command has been disabled")
         # voice
         if ".voice-vote" in message:
             if settings.funcSettings.useVote is True:
-                if username in moderation.minimods.mMods():
-                    com, vote = message.split(" ")
-                    voting.voice.vote(username, vote),
-                    send_message(username + " has voted")
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Vote) is True:
+                        com, vote = message.split(" ")
+                        voting.voice.vote(username, vote)
+                        send_message("done")
+                    else:
+                        send_message("your ucal level is not high enough")
                 else:
-                    send_message("you are not allowed to use this command")
+                    com, vote = message.split(" ")
+                    voting.voice.vote(username, vote)
+                    send_message("done")
             else:
-                send_message("voting has been disabled")    
-            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+                send_message("this command has been disabled")
         # clear voice
         if ".voice-clear" in message:
             if settings.funcSettings.useVote is True:
-                if username in settings.core.trustedUSers:
-                    voting.voice.clear()
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, 80) is True:
+                        voting.voice.clear()
+                        send_message("done")
+                    else:
+                        send_message("your ucal level is not high enough")
                 else:
-                    send_message("you are not allowed to use this command")
+                    voting.voice.clear()
+                    send_message("done")
             else:
-                send_message("voting has been disabled")
-            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+                send_message("this command has been disabled")
         # counting voice votes
         if ".voice-count" in message:
             if settings.funcSettings.useVote is True:
-                if username in settings.core.trustedUsers:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Vote) is True:
+                        votes = voting.voice.read()
+                        yays = votes[0]
+                        nays = votes[1]
+                        send_message("yays: " + yays + " | " + "nayes: " + nays)
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
                     votes = voting.voice.read()
                     yays = votes[0]
                     nays = votes[1]
-                    send_message("yays: " + yays + " | " + "nays: " + nays)
-                else:
-                    send_message("you are not allowed to use this command")
+                    send_message("yays: " + yays + " | " + "nayes: " + nays)
             else:
-                send_message("voting has been disabled")
+                send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # canidate voting
         if ".multi-vote" in message:
             if settings.funcSettings.useVote is True:
-                if username in moderation.minimods.mMods():
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Vote) is True:
+                        com, candidate = message.split(" ")
+                        voting.multi.castVote(username, candidate)
+                        send_message("you have voted")
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
                     com, candidate = message.split(" ")
                     voting.multi.castVote(username, candidate)
                     send_message("you have voted")
-                else:
-                    send_message("you are not allowed to vote")
             else:
-                send_message("voting has been disabled")
+                send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # issue
         if ".issue" in message:
             if settings.funcSettings.useVote is True:
-                send_message(voting.multi.issue)
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Vote) is True:
+                        send_message(voting.multi.issue())
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    send_message(voting.multi.issue())
             else:
-                send_message("voting has been disabled")
+                send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # multi results
         if ".multi-results" in message:
             if settings.funcSettings.useVote is True:
-                send_message(voting.multi.results())
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Vote) is True:
+                        send_message(voting.multi.results())
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    send_message(voting.multi.results())
             else:
-                send_message("voting has been disabled")
+                send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # multi ballot
         if ".multi-ballot" in message:
             if settings.funcSettings.useVote is True:
-                ballot = voting.multi.ballot()
-                for candidate in ballot:
-                    send_message(candidate)
-                    time.sleep(3)
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Vote) is True:
+                        ballot = voting.multi.ballot()
+                        for candidate in ballot:
+                            send_message(candidate)
+                            time.sleep(3)
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    ballot = voting.multi.ballot()
+                    for candidate in ballot:
+                        send_message(candidate)
+                        time.sleep(3)
             else:
-                send_message("voting has been disabled")
+                send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # random stuff
         if ".drink" in message:
             if settings.funcSettings.useDrink is True:
-                try:
-                    com, user = message.split(" ")
-                except ValueError:
-                    user = username
-                send_message(Frandom.drink.drink(user))
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Drink) is True:
+                        try:
+                            com, user = message.split(" ")
+                        except ValueError:
+                            user = username
+                        send_message(Frandom.drink.drink(user))
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    try:
+                        com, user = message.split(" ")
+                    except ValueError:
+                        user = username
+                    send_message(Frandom.drink.drink(user))
             else:
-                send_message("drinking has been disabled, how sad")
+                send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # joke
         if ".joke" in message:
             if settings.funcSettings.useJokes is True:
-                send_message(Frandom.joke.joke())
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Jokes) is True:
+                        send_message(Frandom.joke.joke())
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    send_message(Frandom.joke.joke())
             else:
                 send_message("joking is not allowed in this tyrannical room")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # insult
         if ".insult" in message:
             if settings.funcSettings.useInsults is True:
-                send_message(Frandom.insults.insult())
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Insults) is True:
+                        send_message(Frandom.insults.insult())
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    send_message(Frandom.insults.insult())
             else:
-                send_message("ok, this one kinda makes sense, but it's still disabled")
+                send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
         # cuss
         if ".cuss" in message:
             if settings.funcSettings.useCuss is True:
-                send_message(Frandom.cuss.cuss())
+                if settings.funcSettings.useUcal is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.Cuss) is True:
+                        send_message(Frandom.cuss.cuss())
+                    else:
+                        send_message("your ucal level is not high enough")
+                else:
+                    send_message(Frandom.cuss.cuss())
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
