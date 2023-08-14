@@ -439,6 +439,6 @@ while True:
             else:
                 send_message("UCAL is not used in this room, you must like killing puppies")
         # have ucal add all new users with abitrarily high number
-        UCAL.ucal.check(username, 99999)
+        UCAL.ucal.add(username)
     except KeyboardInterrupt():
         print("interrupt recieved")
