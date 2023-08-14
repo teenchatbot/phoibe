@@ -6,11 +6,11 @@ class ucal:
         with open("json-files/ucal.json", "r") as file:
             data = json.load(file)
             if username not in data:
-                data[username] = 0
+                data['people'][username] = 0
                 with open("json-files/ucal.json", "w") as file:
                     json.dump(data, file, indent=4)
             if username in data:
-                level = data[username]
+                level = data['people'][username]
                 if level >= commandLevel:
                     return True
                 else:
@@ -18,6 +18,6 @@ class ucal:
     def raiseLevel(username, levels):
         with open("json-files/ucal.json", "r") as file:
             data = json.load(file)
-            data[username] = data[username] + levels
+            data[username] = data['people'][username] + levels
             with open("json-files/ucal.json", "w") as file:
                 json.dump(data, file, indent=4)
