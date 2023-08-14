@@ -321,7 +321,9 @@ while True:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.Vote) is True:
-                        send_message(voting.multi.results())
+                        results = voting.multi.results()
+                        print(results)
+
                     else:
                         send_message("your ucal level is not high enough")
                 else:
