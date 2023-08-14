@@ -398,7 +398,7 @@ while True:
         # cuss
         if ".cuss" in message:
             if settings.funcSettings.useCuss is True:
-                if settings.funcSettings.useUcal is True:
+                if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.Cuss) is True:
                         send_message(Frandom.cuss.cuss())
                     else:
