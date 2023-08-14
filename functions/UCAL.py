@@ -26,3 +26,5 @@ class ucal:
             data = json.load(file)
             if username not in data.keys():
                 data[username] = 0
+                with open("json-files/ucal.json", "w") as file:
+                    json.dump(data, file, indent=4)
