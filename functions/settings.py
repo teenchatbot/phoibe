@@ -50,7 +50,7 @@ class funcSettings:
     useDrink = settingsdata['functionSettings']['useDrink']
     useWew = settingsdata['functionSettings']['useWew']
     usePing = settingsdata['functionSettings']['usePing']
-    useRaiseLevel = settingsdata['functionsSettings']['useRaiseLevel']
+    useRaiseLevel = settingsdata['functionSettings']['useRaiseLevel']
 
 
 class ucalLevels:
