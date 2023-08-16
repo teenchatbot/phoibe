@@ -58,11 +58,13 @@ print("entered the chat")
 
 # reading and stripping down the messages so that they can be proccesses by the bot
 def read_messages():
+    time.sleep(.5)
     raw_text = str(browser.find_elements(By.XPATH, '//*[@class="log-container may-transform"]')[-1].text)
     return raw_text
 
 
 def send_message(message):
+    time.sleep(.5)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/textarea').send_keys(message)
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
