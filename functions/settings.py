@@ -51,7 +51,7 @@ class funcSettings:
     useWew = settingsdata['functionSettings']['useWew']
     usePing = settingsdata['functionSettings']['usePing']
     useRaiseLevel = settingsdata['functionSettings']['useRaiseLevel']
-    useAlert = settingsdata['functionSettings']['userAlert']
+    useAlert = settingsdata['functionSettings']['useAlert']
 
 
 class ucalLevels:
