@@ -20,6 +20,7 @@ from functions import voting
 from functions import wheelie
 from functions import Frandom
 from functions import UCAL
+from functions import services
 
 # selinum shit
 
@@ -448,7 +449,27 @@ while True:
                     send_message("UCAL is not used in this room")
             else:
                 send_message("UCAL is not used in this room, you must like killing puppies")
-        # have ucal add all new users with abitrarily high number
+        if ".alert" in message:
+            if settings.funcSettings.useAlert is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.alert) is True:
+                        names = services.services.alert()
+                        names = names.split("\n")
+                        for name in names:
+                            send_message(name)
+                            time.sleep(3)
+                    else:
+                        send_message("your UCAL level is not high enough to use this command")
+                else:
+                    names = services.services.alert()
+                    names = names.split("\n")
+                    for name in names:
+                        send_message(name)
+                        time.sleep(3)
+            else:
+                send_message("alert has been disabled")
+            internalFunctions.logs.writeToLogs("INFO - [" + username + "] used a command")
+        # have ucal add all new users
         UCAL.ucal.add(username)
     except KeyboardInterrupt():
         print("interrupt recieved")

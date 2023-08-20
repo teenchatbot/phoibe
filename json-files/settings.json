@@ -50,7 +50,8 @@
         "useDrink" : true,
         "useWew" : true,
         "usePing" : true,
-        "useRaiseLevel" : true
+        "useRaiseLevel" : true,
+        "useAlert" : true
 	},
     "ucalLevels" :
 	{
@@ -85,6 +86,7 @@
         "Wew" : 0,
         "Ping" : 0,
         "raiseLevel" : 0
+        "alert" : 0
 	},
     "moderation" :
     {
