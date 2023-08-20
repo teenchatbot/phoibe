@@ -231,13 +231,13 @@ while True:
                     if UCAL.ucal.check(username, settings.ucalLevels.Translations) is True:
                         goodies = message.split(" ", maxsplit=1)
                         updatedGoodies = goodies[1].rsplit(" ", 1)
-                        send_message(translation.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
+                        send_message(tran.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
                     else:
                         send_message("your ucal level is not high enough")
                 else:
                     goodies = message.split(" ", maxsplit=1)
                     updatedGoodies = goodies[1].rsplit(" ", 1)
-                    send_message(translation.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
+                    send_message(tran.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
             else:
                 send_message("this command has been disabled")
         # voice
