@@ -15,7 +15,7 @@ from functions import internal
 from functions import internalFunctions
 from functions import moderation
 from functions import rules
-from functions import translation
+from functions import tran
 from functions import voting
 from functions import wheelie
 from functions import Frandom
