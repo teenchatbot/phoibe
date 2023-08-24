@@ -81,6 +81,9 @@ while True:
         raw = raw.split("\n")
         if len(raw) == 3:
             raw.pop(1)
+        elif len(raw) == 2:
+            if len(raw[0]) <= 3:
+                raw.pop(0)
         try:
             username = raw[0]
             message = raw[1]
@@ -469,6 +472,10 @@ while True:
             else:
                 send_message("alert has been disabled")
             internalFunctions.logs.writeToLogs("INFO - [" + username + "] used a command")
+        # custom messages
+        if settings.core.name in message:
+            send_message(fun.messages.custom(username))
+            time.sleep(.5)
         # have ucal add all new users
         UCAL.ucal.add(username)
     except KeyboardInterrupt():
