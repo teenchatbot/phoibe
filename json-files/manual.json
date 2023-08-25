@@ -115,7 +115,7 @@
 	},
 	"drinks" :
 	{
-		"name" : "drinks",
+		"name" : "drink",
 		"description" : "[LEGACY COMMAND] send the entire chat or someone specific a drink",
 		"usage" : "(.)drinks [(optional) username]"
 	},
