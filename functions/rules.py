@@ -1,7 +1,7 @@
 
 
 class rules:
-    def read():
+    def readrules():
         with open("rules.txt", "r") as file:
             rules = str(file.read())
             rules = rules.split('\n')

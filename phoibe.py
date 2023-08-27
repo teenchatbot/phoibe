@@ -198,7 +198,7 @@ while True:
             if settings.funcSettings.useRules is True:
                 if settings.funcSettings.useUcal is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.Rules) is True:
-                        rules = rules.rules.read()
+                        rules = rules.rules.readrules()
                         for thing in rules:
                             send_message(thing)
                             time.sleep(3)
@@ -472,10 +472,6 @@ while True:
             else:
                 send_message("alert has been disabled")
             internalFunctions.logs.writeToLogs("INFO - [" + username + "] used a command")
-        # custom messages
-        if settings.core.name in message:
-            send_message(fun.messages.custom(username))
-            time.sleep(.5)
         # have ucal add all new users
         UCAL.ucal.add(username)
     except KeyboardInterrupt():
