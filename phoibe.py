@@ -110,6 +110,12 @@ while True:
                 internalFunctions.logs.writeToLogs("WARN - " + username + " tried to use a command")
         # commands
 
+        # quickly going to get good morning out of the way
+        if ".gm" in message:
+            send_message("good morning sleepyhead")
+        if ".gn" in message:
+            send_message("good night my little pumpkin boo")
+
         # filesay
         if ".filesay" in message:
             if settings.funcSettings.useFilsay is True:
