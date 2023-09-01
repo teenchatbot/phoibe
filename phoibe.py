@@ -116,6 +116,87 @@ while True:
         if ".gn" in message:
             send_message("good night my little pumpkin boo")
 
+        # feelings
+
+        if ".melike" in message:
+            if settings.funcSettings.useGetLike is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.GetLike) is True:
+                        try:
+                            command, like = message.split(" ")
+                        except:
+                            send_message("something went wrong with your request, did you make sure to add something?")
+                        try:
+                            feelings.likes.get_like(like, username)
+                            send_message("It's offical, " + username + " likes " + like)
+                        except Exception as e:
+                            send_message("An unknown error has occured here is your error: " + str(e))
+                    else:
+                        send_message("your UCAL level is not high enough")
+                else:
+                    try:
+                        command, like = message.split(" ")
+                    except:
+                        send_message("something went wrong with your request, did you make sure to add something?")
+                try:
+                    feelings.likes.get_like(like, username)
+                    send_message("It's offical, " + username + " likes " + like)
+                except Exception as e:
+                    send_message("An unknown error has occured here is your error: " + str(e))
+            else:
+                send_message("liking has been disabled")
+        # reading the likes
+        if ".whatlike" in message:
+            if settings.funcSettings.useGetLike is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.ReadLike) is True:
+                        send_message(feelings.likes.read_like(username))
+                    else:
+                        send_message("your UCAL level is not high enough")
+                else:
+                    send_message(feelings.likes.read_like(username))
+            else:
+                send_message("liking has been disabled")
+        # hates
+        if ".mehate" in message:
+            if settings.funcSettings.useGetHate is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.GetHate) is True:
+                        try:
+                            command, like = message.split(" ")
+                        except:
+                            send_message("something went wrong with your request, did you make sure to add something?")
+                        try:
+                            feelings.hates.get_hate(like, username)
+                            send_message("It's offical, " + username + " hates " + like)
+                        except Exception as e:
+                            send_message("An unknown error has occured here is your error: " + str(e))
+                    else:
+                        send_message("your UCAL level is not high enough")
+                else:
+                    try:
+                        command, like = message.split(" ")
+                    except:
+                        send_message("something went wrong with your request, did you make sure to add something?")
+                try:
+                    feelings.hates.get_hate(like, username)
+                    send_message("It's offical, " + username + " hates " + like)
+                except Exception as e:
+                    send_message("An unknown error has occured here is your error: " + str(e))
+            else:
+                send_message("hating has been disabled")
+        # reading the likes
+        if ".whathate" in message:
+            if settings.funcSettings.useGetHate is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.ReadHate) is True:
+                        send_message(feelings.hates.read_like(username))
+                    else:
+                        send_message("your UCAL level is not high enough")
+                else:
+                    send_message(feelings.hates.read_like(username))
+            else:
+                send_message("hating has been disabled")
         # filesay
         if ".filesay" in message:
             if settings.funcSettings.useFilsay is True:
