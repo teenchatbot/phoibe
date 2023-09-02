@@ -1,10 +1,4 @@
 {
-	"help" :
-	{
-		"name" : "Help",
-		"description" : "The very basic help command",
-		"usage" : "(.)help"
-	},
 	"wheelie":
 	{
 		"name" : "Wheelie",
@@ -17,11 +11,11 @@
 		"description" : "Shows the canidates or options for multi option voting, gives you the canidate's username to the left of the username or option",
 		"usage" : "(.)ballot"
 	},
-	"castfor" :
+	"multi-vote" :
 	{
-		"name" : "castfor",
-		"description" : "FOR CITIZENS ONLY - casts votes for a certain canidate or option [YOU NEED TO LOOK AT BALLOT BEFOREHAND]",
-		"usage" : "(.)castfor [username]"
+		"name" : "multi vote",
+		"description" : "casts votes for a certain canidate or option [YOU SHOULD TO LOOK AT BALLOT BEFOREHAND]",
+		"usage" : "(.)multi-vote [username]"
 	},
 	"srule" :
 	{
@@ -34,12 +28,6 @@
 		"name" : "good morning",
 		"description" : "tell everyone good morning",
 		"usage" : "(.gm)"
-	},
-	"bday" :
-	{
-		"name" : "birthday",
-		"description" : "Check on the bot's birthday",
-		"usage" : "(.)bday"
 	},
 	"disclosure" :
 	{

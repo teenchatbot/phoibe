@@ -7,7 +7,6 @@
 ### the devs are:
 ### R_Powell - Lead Developer and creator
 ### Mikaelvussy - Error handling and JSON
-### michaelangelo - Bug Fixes and Docs
 ## These people will know the most about the bot, if you cant get ahold of one of them then ask a mod, who are all well versed in the operations of the bot
 
 # Main usage
@@ -61,5 +60,5 @@ UserB: I don't know what the time is
 .fight R_Powell Mikaelvussy
 ```
 
-### This will then give you the results of the fight. Using this very basic example you should be able to aptly use the wheelie command to use any other commands that you need help with, if you like to see the available commands then you can use the .help command which will give you the command and then a very brief description about it
-
+### This will then give you the results of the fight. Using this very basic example you should be able to aptly use the wheelie command to use any other commands that you would like to
+### For more commands, please see either wheelie.json (if you can read json), or see commands.md
