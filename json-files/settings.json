@@ -21,7 +21,7 @@
 	{
 		"LogChat" : true,
         "useHelp" : true,
-        "useFilesay" : true,
+        "useFilesay" : false,
         "useReadTime" : true,
         "useReadDate" : false,
         "useTimez" : true,
@@ -50,7 +50,7 @@
         "useDrink" : true,
         "useWew" : true,
         "usePing" : true,
-        "useRaiseLevel" : true,
+        "useRaiseLevel" : false,
         "useAlert" : true,
         "useDice" : true
 	},

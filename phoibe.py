@@ -7,7 +7,7 @@ import time
 import random
 import json
 from functions import settings
-from functions import time as fTime
+from functions import timeFunctions as fTime
 from functions import filesay
 from functions import feelings
 from functions import fun
