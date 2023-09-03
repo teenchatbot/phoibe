@@ -33,3 +33,8 @@ class joke:
             data = json.load(file)
             jokes = data['jokes']
             return random.choice(jokes)
+class dice:
+    def roll(side):
+        # side is the amount of sides on the dice
+        return random.randint(1, side)
+        # literally just made a dice in a singular line

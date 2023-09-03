@@ -1,6 +1,8 @@
 import os
 from zipfile import ZipFile
 import json
+import shutil
+
 
 url = "https://github.com/teenchatbot/phoibe/releases/download/v2.0.1/phoibe-mucho.zip"
 
@@ -17,7 +19,7 @@ with ZipFile("./latest.zip") as zObject:
     zObject.extractall("./")
 # the .zip has been extracted
 
-# compare differences 
+# compare differences
 
 # check the length of the settings file to the one that's in the new release
 # old settings file
@@ -53,6 +55,8 @@ with open("./../json-files/settings.json", "r") as settingsFile:
                 print("new setting found")
 newSetsFile.close()
 
+
+# delete the old files
 
 
 # ask for user input to close
