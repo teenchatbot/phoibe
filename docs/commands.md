@@ -41,4 +41,40 @@ usage:
 .disclosure
 ```
 
-## 
+## urbandict
+return the definition of a search term 
+usage:
+```
+.urbandict [search term]
+```
+
+## langhelp
+this is depreceated
+
+## translate
+translates text from one language to another
+usage:
+```
+.translate [text] [language code]
+```
+
+## joke
+tells you a joke
+usage:
+```
+.joke
+```
+
+## alert
+gives a list of pedos and creeps
+usage:
+```
+.alert
+```
+
+## melike
+tell the bot you like something
+usage:
+```
+.melike [thing you like]
+```

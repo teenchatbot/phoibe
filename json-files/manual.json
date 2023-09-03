@@ -89,11 +89,11 @@
 		"description" : "shows a list of pedos and creeps",
 		"usage" : "(.)alert"
 	},
-	"like" : 
+	"melike" : 
 	{
-		"name" : "like",
-		"description" : "check to see who likes the bot - The hate command works in the exact same way",
-		"usage" : "(.)like"
+		"name" : "melike",
+		"description" : "tell the bot you like something",
+		"usage" : "(.)melike [something]"
 	},
 	"ilike" :
 	{
