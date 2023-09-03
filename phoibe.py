@@ -72,7 +72,6 @@ def send_message(message):
 
 # moderation | I couldnt figure out how to fit this into a function file
 def mute():
-    deleteLink = '//*[@id="app"]/div[2]/div/div/div[2]/div[2]/div[1]/a'
     userSaid = browser.find_elements(By.XPATH, '//*[@class="message-tooltip show-on-hover"]')
     e = browser.find_elements(By.XPATH, '//*[@class="text_wrapper"]')
     e = e[-1]
@@ -80,7 +79,7 @@ def mute():
     f = browser.find_elements(By.XPATH, '//*[@class="btn btn--flat btn--icon"]')[-1]
     a.move_to_element(f)
     a.click()
-    a.move_to_element(browser.find_element(By.XPATH, deleteLink))
+    a.move_to_element(browser.find_element(By.XPATH, "//div[@class='list__tile__title' and text()='Delete Message']"))
     a.click()
 def check_mute(username):
     with open("./syscrit/people/mute.txt") as file:
