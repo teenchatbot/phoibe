@@ -559,6 +559,25 @@ while True:
             else:
                 send_message("alert has been disabled")
             internalFunctions.logs.writeToLogs("INFO - [" + username + "] used a command")
+        if ".roll" in message:
+            if settings.funcSettings.useDice is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.dice) is True:
+                        try:    
+                            com, side = message.split(" ")
+                        except IndexError:
+                            side = 6
+                        send_message(Frandom.dice.roll(side))
+                    else:
+                        send_message("your UCAL level is not high enough to use this command")
+                else:
+                    try:
+                        com, side = message.split(" ")
+                    except IndexError:
+                        side = 6
+                    send_message(Frandom.dice.roll(side))
+            else:
+                send_message("this command has been disabled")
         # have ucal add all new users
         UCAL.ucal.add(username)
     except KeyboardInterrupt():

@@ -51,7 +51,8 @@
         "useWew" : true,
         "usePing" : true,
         "useRaiseLevel" : true,
-        "useAlert" : true
+        "useAlert" : true,
+        "useDice" : true
 	},
     "ucalLevels" :
 	{
@@ -86,7 +87,8 @@
         "Wew" : 0,
         "Ping" : 0,
         "raiseLevel" : 0,
-        "alert" : 0
+        "alert" : 0,
+        "dice" : 0
 	},
     "moderation" :
     {

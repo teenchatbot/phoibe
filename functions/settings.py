@@ -52,7 +52,7 @@ class funcSettings:
     usePing = settingsdata['functionSettings']['usePing']
     useRaiseLevel = settingsdata['functionSettings']['useRaiseLevel']
     useAlert = settingsdata['functionSettings']['useAlert']
-
+    useDice = settingsdata['functionSettings']['useDice']
 
 class ucalLevels:
     Help = settingsdata['ucalLevels']['Help']
@@ -85,6 +85,7 @@ class ucalLevels:
     Ping = settingsdata['ucalLevels']['Ping']
     raiseLevel = settingsdata['ucalLevels']['raiseLevel']
     alert = settingsdata['ucalLevels']['alert']
+    dice = settingsdata['ucalLevels']['dice']
 
 
 class keys:
