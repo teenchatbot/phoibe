@@ -70,28 +70,6 @@ def send_message(message):
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
 
-# moderation | I couldnt figure out how to fit this into a function file
-def mute():
-    userSaid = browser.find_elements(By.XPATH, '//*[@class="message-tooltip show-on-hover"]')
-    e = browser.find_elements(By.XPATH, '//*[@class="text_wrapper"]')
-    e = e[-1]
-    a.move_to_element(e).perform()
-    f = browser.find_elements(By.XPATH, '//*[@class="btn btn--flat btn--icon"]')[-1]
-    a.move_to_element(f)
-    a.click()
-    a.move_to_element(browser.find_element(By.XPATH, "//div[@class='list__tile__title' and text()='Delete Message']"))
-    a.click()
-def check_mute(username):
-    with open("./syscrit/people/mute.txt") as file:
-        lin = file.readline()
-        lines = lin.split("\n")
-        for linesx in lines:
-            if username in linesx:
-                return True
-            else:
-                return False
-
-
 
 
 
@@ -135,9 +113,6 @@ while True:
             if checked is True:
                 message = ""
                 internalFunctions.logs.writeToLogs("WARN - " + username + " tried to use a command")
-        # mute users
-        if check_mute(username):
-            mute()
         # commands
 
         # quickly going to get good morning out of the way
