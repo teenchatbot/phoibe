@@ -583,6 +583,7 @@ while True:
                 else:
                     try:
                         com, side = message.split(" ")
+                        side = int(side)
                     except IndexError:
                         side = 6
                     send_message(Frandom.dice.roll(side))
