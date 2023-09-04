@@ -6,7 +6,7 @@
             "entrances" : ["hello", "hi there", "hola"],
             "name" : "",
             "version" : "version 2.0.2 Hephaestus",
-            "trustedUsers" : [""]
+            "trustedUsers" : ["R_Powell", "Mikaelvussy"]
 		},
 	"radio" :
 		{
@@ -21,7 +21,7 @@
 	{
 		"LogChat" : true,
         "useHelp" : true,
-        "useFilesay" : false,
+        "useFilesay" : true,
         "useReadTime" : true,
         "useReadDate" : false,
         "useTimez" : true,
@@ -50,14 +50,14 @@
         "useDrink" : true,
         "useWew" : true,
         "usePing" : true,
-        "useRaiseLevel" : false,
+        "useRaiseLevel" : true,
         "useAlert" : true,
         "useDice" : true
 	},
     "ucalLevels" :
 	{
         "Help" : 0,
-        "Filesay" : 0,
+        "Filesay" : 85,
         "ReadTime" : 0,
         "ReadDate" :0,
         "Timez" : 0,
@@ -86,7 +86,7 @@
         "Drink" : 0,
         "Wew" : 0,
         "Ping" : 0,
-        "raiseLevel" : 0,
+        "raiseLevel" : 90,
         "alert" : 0,
         "dice" : 0
 	},

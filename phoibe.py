@@ -107,21 +107,21 @@ while True:
             print(message)
             mesBuffer = message
 
-        # blacklist
+# blacklist
         if settings.moderation.useBlacklist is True:
             checked = moderation.blacklist.check(username)
             if checked is True:
                 message = ""
                 internalFunctions.logs.writeToLogs("WARN - " + username + " tried to use a command")
-        # commands
+# commands
 
-        # quickly going to get good morning out of the way
+# good morning and good night
         if ".gm" in message:
             send_message("good morning sleepyhead")
         if ".gn" in message:
             send_message("good night my little pumpkin boo")
 
-        # feelings
+# feelings
 
         if ".melike" in message:
             if settings.funcSettings.useGetLike is True:
@@ -150,7 +150,7 @@ while True:
                     send_message("An unknown error has occured here is your error: " + str(e))
             else:
                 send_message("liking has been disabled")
-        # reading the likes
+# reading the likes
         if ".whatlike" in message:
             if settings.funcSettings.useGetLike is True:
                 if settings.funcSettings.useUCAL is True:
@@ -162,7 +162,7 @@ while True:
                     send_message(feelings.likes.read_like(username))
             else:
                 send_message("liking has been disabled")
-        # hates
+# hates
         if ".mehate" in message:
             if settings.funcSettings.useGetHate is True:
                 if settings.funcSettings.useUCAL is True:
@@ -190,7 +190,7 @@ while True:
                     send_message("An unknown error has occured here is your error: " + str(e))
             else:
                 send_message("hating has been disabled")
-        # reading the likes
+# reading the likes
         if ".whathate" in message:
             if settings.funcSettings.useGetHate is True:
                 if settings.funcSettings.useUCAL is True:
@@ -202,7 +202,7 @@ while True:
                     send_message(feelings.hates.read_like(username))
             else:
                 send_message("hating has been disabled")
-        # filesay
+# filesay
         if ".filesay" in message:
             if settings.funcSettings.useFilsay is True:
                 if settings.funcSettings.useUCAL is True:
@@ -222,7 +222,7 @@ while True:
                         send_message("you most likely misspelled the timezone")
             else:
                 send_message("this command has been disabled")
-        # timezones
+# timezones
         if ".timez" in message:
             if settings.funcSettings.useTimez is True:
                 if settings.funcSettings.useUCAL is True:
@@ -242,7 +242,7 @@ while True:
                         send_message("you most likely misspelled the timezone")
             else:
                 send_message("this command has been disabled")
-        # wheelie
+# wheelie
         if ".wheelie" in message:
             if settings.funcSettings.useWheelie is True:
                 com, com2 = message.split(" ")
@@ -253,7 +253,7 @@ while True:
             else:
                 send_message("wheelie has been disabled (this is stupid, turn it back on)")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # fight
+# fight
         if ".fight" in message:
             if settings.funcSettings.useFight is True:
                 if settings.funcSettings.useUCAL is True:
@@ -267,11 +267,11 @@ while True:
                     send_message(fun.fight.fight(user1, user2))
             else:
                 send_message("this command has been disabled")
-        # custom messages
+# custom messages
         if settings.core.name in message:
             if settings.funcSettings.useCMessages is True:
                 send_message(fun.messages.custom(username))
-        # urbandict
+# urbandict
         if ".urbandict" in message:
             if settings.funcSettings.useUrbandict is True:
                 if settings.funcSettings.useUCAL is True:
@@ -285,7 +285,7 @@ while True:
                     send_message(fun.urbandict.getdef(term))
             else:
                 send_message("this command has been disabled")
-        # rules
+# rules
         if ".rules" in message:
             if settings.funcSettings.useRules is True:
                 if settings.funcSettings.useUcal is True:
@@ -304,7 +304,7 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # specific rule
+# specific rule
         if ".srule" in message:
             if settings.funcSettings.useSRule is True:
                 if settings.funcSettings.useUcal is True:
@@ -319,7 +319,7 @@ while True:
             else:
                 send_message("srule has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # translation
+# translation
         if ".translate" in message:
             if settings.funcSettings.useTranslations is True:
                 if settings.funcSettings.useUCAL is True:
@@ -335,7 +335,7 @@ while True:
                     send_message(tran.deepl.translate(updatedGoodies[0], updatedGoodies[1]))
             else:
                 send_message("this command has been disabled")
-        # voice
+# voice
         if ".voice-vote" in message:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
@@ -351,7 +351,7 @@ while True:
                     send_message("done")
             else:
                 send_message("this command has been disabled")
-        # clear voice
+# clear voice
         if ".voice-clear" in message:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
@@ -365,7 +365,7 @@ while True:
                     send_message("done")
             else:
                 send_message("this command has been disabled")
-        # counting voice votes
+# counting voice votes
         if ".voice-count" in message:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
@@ -384,7 +384,7 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # canidate voting
+# canidate voting
         if ".multi-vote" in message:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
@@ -407,7 +407,7 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # issue
+# issue
         if ".issue" in message:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
@@ -420,7 +420,7 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # multi results
+# multi results
         if ".multi-results" in message:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
@@ -435,7 +435,7 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # multi ballot
+# multi ballot
         if ".multi-ballot" in message:
             if settings.funcSettings.useVote is True:
                 if settings.funcSettings.useUCAL is True:
@@ -454,7 +454,7 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # random stuff
+# random stuff
         if ".drink" in message:
             if settings.funcSettings.useDrink is True:
                 if settings.funcSettings.useUCAL is True:
@@ -475,7 +475,7 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # joke
+# joke
         if ".joke" in message:
             if settings.funcSettings.useJokes is True:
                 if settings.funcSettings.useUCAL is True:
@@ -488,7 +488,7 @@ while True:
             else:
                 send_message("joking is not allowed in this tyrannical room")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # insult
+# insult
         if ".insult" in message:
             if settings.funcSettings.useInsults is True:
                 if settings.funcSettings.useUCAL is True:
@@ -501,7 +501,7 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # cuss
+# cuss
         if ".cuss" in message:
             if settings.funcSettings.useCuss is True:
                 if settings.funcSettings.useUCAL is True:
@@ -514,12 +514,13 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
-        # wew
+# wew
         if ".wew" in message:
             if settings.funcSettings.useWew is True:
                 send_message("what is that?")
             else:
                 send_message("it was disabled, how sad")
+# ping
         if ".ping" in message:
             if settings.funcSettings.usePing is True:
                 if settings.funcSettings.useUCAL is True:
@@ -531,6 +532,7 @@ while True:
                     send_message("pong")
             else:
                 send_message("ping has been turned off")
+# raise level
         if ".raiseLevel" in message:
             if settings.funcSettings.useRaiseLevel is True:
                 if settings.funcSettings.useUCAL is True:
@@ -544,6 +546,7 @@ while True:
                     send_message("UCAL is not used in this room")
             else:
                 send_message("UCAL is not used in this room, you must like killing puppies")
+# alert
         if ".alert" in message:
             if settings.funcSettings.useAlert is True:
                 if settings.funcSettings.useUCAL is True:
@@ -564,11 +567,12 @@ while True:
             else:
                 send_message("alert has been disabled")
             internalFunctions.logs.writeToLogs("INFO - [" + username + "] used a command")
+# roll
         if ".roll" in message:
             if settings.funcSettings.useDice is True:
                 if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.dice) is True:
-                        try:    
+                        try:
                             com, side = message.split(" ")
                         except IndexError:
                             side = 6
