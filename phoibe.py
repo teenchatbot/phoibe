@@ -574,6 +574,7 @@ while True:
                     if UCAL.ucal.check(username, settings.ucalLevels.dice) is True:
                         try:
                             com, side = message.split(" ")
+                            side = int(side)
                         except:
                             side = 6
                         send_message(Frandom.dice.roll(side))
