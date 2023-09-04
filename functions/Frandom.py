@@ -36,5 +36,5 @@ class joke:
 class dice:
     def roll(side):
         # side is the amount of sides on the dice
-        return random.randint(1, side)
+        return str(random.randint(1, side))
         # literally just made a dice in a singular line
