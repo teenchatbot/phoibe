@@ -32,7 +32,8 @@ class hates:
     def get_hate(like, username):
         success = False
         bannedChars = ["'}", "']" "."]
-        like = like.strip(bannedChars)
+        for char in bannedChars:
+            like = like.strip(char)
         with open("json-files/hate.json", "r") as f:
             data = json.load(f)
             if username in data:
@@ -47,9 +48,11 @@ class hates:
             json.dump(data, f, indent=4)
 
     def read_like(username):
+        likeness = []
         with open("json-files/hate.json", "r") as f:
             data = json.load(f)
             if username in data:
-                return data
+                for thing in data[username]:
+                    likeness.append(thing)
             else:
                 return "sorry, you were not found in the file"
