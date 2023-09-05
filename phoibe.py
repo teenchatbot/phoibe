@@ -122,32 +122,25 @@ while True:
             send_message("good night my little pumpkin boo")
 
 # feelings
-
         if ".melike" in message:
             if settings.funcSettings.useGetLike is True:
                 if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.GetLike) is True:
                         try:
                             command, like = message.split(" ")
-                        except:
-                            send_message("something went wrong with your request, did you make sure to add something?")
-                        try:
                             feelings.likes.get_like(like, username)
-                            send_message("It's offical, " + username + " likes " + like)
+                            send_message("it's offical" + " " + username + " likes " + like)
                         except Exception as e:
                             send_message("An unknown error has occured here is your error: " + str(e))
                     else:
                         send_message("your UCAL level is not high enough")
                 else:
                     try:
-                        command, like = message.split(" ")
-                    except:
-                        send_message("something went wrong with your request, did you make sure to add something?")
-                try:
-                    feelings.likes.get_like(like, username)
-                    send_message("It's offical, " + username + " likes " + like)
-                except Exception as e:
-                    send_message("An unknown error has occured here is your error: " + str(e))
+                        command, like = message.split(" ", maxsplit=1)
+                        feelings.likes.get_like(like, username)
+                        send_message("it's offical" + " " + username + " likes " + like)
+                    except Exception as e:
+                        send_message("An unknown error has occured here is your error: " + str(e))
             else:
                 send_message("liking has been disabled")
 # reading the likes
