@@ -77,6 +77,10 @@ def mute(users, username):
             e = browser.find_elements(By.XPATH, '//*[@class="text_wrapper"]')
             e = e[-1] # get the last one
             a.move_to_element(e).perform()
+            f = browser.find_elements(By.XPATH, '//*[@class="btn btn--flat btn--icon"]')[-1]
+            a.move_to_element(f)
+            a.click()
+
 
 
 
