@@ -5,7 +5,8 @@ class likes:
     def get_like(like, username):
         success = False
         bannedChars = ["'}", "']" "."]
-        like = like.strip(bannedChars)
+        for char in bannedChars:
+            like = like.strip(char)
         with open("json-files/likes.json", "r") as f:
             data = json.load(f)
             if username in data:

@@ -1,0 +1,497 @@
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[LOG] Cleaned old hyprpaper preloads (34), removing 329.0MB
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor1/arch4k.png in 152.52ms -> Pixel size: [4096, 2160]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor1/arch-cloud.jpg in 62.19ms -> Pixel size: [4838, 2721]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor1/archbw.png in 17.62ms -> Pixel size: [1920, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor1/blossom.jpg in 10.91ms -> Pixel size: [1920, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor1/clouds.jpg in 23.02ms -> Pixel size: [1920, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor1/mountain.jpg in 25.74ms -> Pixel size: [1920, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor1/ocean-cloud.jpg in 27.48ms -> Pixel size: [1920, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/astronaut-minimal.jpg in 46.72ms -> Pixel size: [2560, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/fractal.png in 25.47ms -> Pixel size: [2560, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/iceberg.jpg in 38.15ms -> Pixel size: [2560, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/kerbal.jpg in 11.78ms -> Pixel size: [2560, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/lake-sunrise.png in 57.06ms -> Pixel size: [2560, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/mountains.jpg in 41.54ms -> Pixel size: [2560, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/mountains-sunset.jpg in 49.12ms -> Pixel size: [2560, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/busypengs.jpg in 18.80ms -> Pixel size: [2560, 1440]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/planets.jpg in 14.40ms -> Pixel size: [2560, 1080]
+[LOG] Preloaded target /home/reidpowell/wallpapers/monitor2/snowy-mountains].jpg in 17.11ms -> Pixel size: [2560, 1080]
+[LOG] hyprpaper socket started at /tmp/hypr/9654749244117f7f150c6f2a2ce4dede6e8cbb25_1693847441/.hyprpaper.sock (fd: 4)
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/busypengs.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/arch4k.png, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/planets.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/clouds.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/mountains-sunset.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/fractal.png, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/arch-cloud.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/archbw.png, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/blossom.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/mountains.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/snowy-mountains].jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/mountain.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/ocean-cloud.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/astronaut-minimal.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/iceberg.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/kerbal.jpg, Shared Memory usage: 8.3MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/lake-sunrise.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 141.0MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/busypengs.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/arch4k.png, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/planets.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/clouds.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/mountains-sunset.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/fractal.png, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/arch-cloud.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/archbw.png, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/blossom.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/mountains.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/snowy-mountains].jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/mountain.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor1/ocean-cloud.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/astronaut-minimal.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/iceberg.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/kerbal.jpg, Shared Memory usage: 11.1MB
+[LOG] Buffer created for target /home/reidpowell/wallpapers/monitor2/lake-sunrise.png, Shared Memory usage: 11.1MB
+[LOG] Total SM usage for all buffers: 329.0MB
+[LOG] configure for DP-1
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] configure for HDMI-A-1
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for DP-1
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] configure for HDMI-A-1
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] configure for DP-1
+[LOG] Image data for DP-1: /home/reidpowell/wallpapers/monitor1/arch4k.png at [-128.00, 0.00], scale: 0.50 (original image size: [4096, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 56da2910
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 17956da2910
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [2560, 1080])
+[LOG] Submitting viewport dest size 2560x1080 for 5712b530
+[LOG] handlePreferredScale: 1.00 for 1795712b530
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/reidpowell/wallpapers/monitor2/planets.jpg at [-0.00, 0.00]
