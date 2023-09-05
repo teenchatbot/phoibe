@@ -13,8 +13,6 @@ class likes:
                 data[username].append(like)
                 success = True
                 return success
-        with open("json-files/likes.json", "w") as f:
-            json.dump(data, f, indent=4)
             else:
                 data[username] = [like]
                 success = True
