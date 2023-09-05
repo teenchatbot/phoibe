@@ -127,7 +127,7 @@ while True:
                 if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.GetLike) is True:
                         try:
-                            command, like = message.split(" ")
+                            command, like = message.split(" ", maxsplit=1)
                             feelings.likes.get_like(like, username)
                             send_message("it's offical" + " " + username + " likes " + like)
                         except Exception as e:
