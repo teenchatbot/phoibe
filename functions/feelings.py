@@ -20,7 +20,7 @@ class likes:
         with open("json-files/likes.json", "r") as f:
             data = json.load(f)
             if username in data:
-                return data
+                return data[username]
             else:
                 return "sorry, you were not found in the file"
 
