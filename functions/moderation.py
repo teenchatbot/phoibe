@@ -40,3 +40,9 @@ class regUsers:
                 return True
             else:
                 return False
+class moderator:
+    def get_muted_users():
+        with open("syscrit/people/mute.txt", "r") as file:
+            lines = file.read()
+            lines = lines.split("\n")
+            return lines # returns an array of all of the users in mute

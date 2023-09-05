@@ -70,9 +70,13 @@ def send_message(message):
     browser.find_element(By.XPATH, '//*[@id="app"]/div[23]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
 
-
-
-
+def mute(users, username):
+    for user in users:
+        if username == users:
+            messages = browser.find_elements(By.XPATH, '//*[@class="message-tooltip show-on-hover"]')
+            e = browser.find_elements(By.XPATH, '//*[@class="text_wrapper"]')
+            e = e[-1] # get the last one
+            a.move_to_element(e).perform()
 
 
 
@@ -106,7 +110,8 @@ while True:
             print("[" + username + "]")
             print(message)
             mesBuffer = message
-
+        users = moderation.moderator.get_muted_users()
+        mute(users, username)
 # blacklist
         if settings.moderation.useBlacklist is True:
             checked = moderation.blacklist.check(username)
