@@ -155,7 +155,7 @@ while True:
             if settings.funcSettings.useGetLike is True:
                 if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.ReadLike) is True:
-                        send_message(feelings.likes.read_like(username))
+                        send_message(str(feelings.likes.read_like(username)))
                     else:
                         send_message("your UCAL level is not high enough")
                 else:

@@ -17,10 +17,13 @@ class likes:
             json.dump(data, f, indent=4)
 
     def read_like(username):
+        likeness = []
         with open("json-files/likes.json", "r") as f:
             data = json.load(f)
             if username in data:
-                return data[username]
+                for thing in data[username]:
+                    likeness.append(thing)
+                return likeness
             else:
                 return "sorry, you were not found in the file"
 
