@@ -72,7 +72,7 @@ def send_message(message):
 
 def mute(users, username):
     for user in users:
-        if username == users:
+        if username in users:
             messages = browser.find_elements(By.XPATH, '//*[@class="message-tooltip show-on-hover"]')
             e = browser.find_elements(By.XPATH, '//*[@class="text_wrapper"]')
             e = e[-1] # get the last one
