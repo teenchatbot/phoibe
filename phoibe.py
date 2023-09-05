@@ -102,8 +102,6 @@ while True:
             print("[" + username + "]")
             print(message)
             mesBuffer = message
-        users = moderation.moderator.get_muted_users()
-        mute(users, username)
 # blacklist
         if settings.moderation.useBlacklist is True:
             checked = moderation.blacklist.check(username)
