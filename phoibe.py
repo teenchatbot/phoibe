@@ -240,13 +240,19 @@ while True:
             if settings.funcSettings.useFight is True:
                 if settings.funcSettings.useUCAL is True:
                     if UCAL.ucal.check(username, settings.ucalLevels.Fight) is True:
-                        com, user1, user2 = message.split(" ")
-                        send_message(fun.fight.fight(user1, user2))
+                        try:
+                            com, user1, user2 = message.split(" ")
+                            send_message(fun.fight.fight(user1, user2))
+                        except Exception as e:
+                            send_message(str(e))
                     else:
                         send_message("your ucal level is not high enough")
                 else:
-                    com, user1, user2 = message.split(" ")
-                    send_message(fun.fight.fight(user1, user2))
+                    try:
+                        com, user1, user2 = message.split(" ")
+                        send_message(fun.fight.fight(user1, user2))
+                    except Exception as e:
+                        send_message(str(e))
             else:
                 send_message("this command has been disabled")
 # custom messages
