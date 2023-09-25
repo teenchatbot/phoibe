@@ -511,7 +511,7 @@ while True:
                             com, user = message.split(" ")
                         except ValueError:
                             user = username
-                        send_message(Frandom.vend.vend(username))
+                        send_message(Frandom.vend.vend(user))
                     else:
                         send_message("your ucal level is not high enough to use this command")
                 else:
@@ -519,7 +519,7 @@ while True:
                         com, user = message.split(" ")
                     except ValueError:
                         user = username
-                    send_message(Frandom.vend.vend(username))
+                    send_message(Frandom.vend.vend(user))
             else:
                 send_message("this room has vend disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
