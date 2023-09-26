@@ -27,8 +27,8 @@ class urls:
                 return x
 
     def findURL(url):
-        reqs = requests.get(url)
         try:
+            reqs = requests.get(url)
             soup = BeautifulSoup(reqs.text, 'html.parser')
             for title in soup.find_all('title'):
                 return title.get_text()
