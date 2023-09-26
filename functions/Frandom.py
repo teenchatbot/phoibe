@@ -39,3 +39,9 @@ class dice:
         roll =  random.randint(1, side)
         return str(roll)
         # literally just made a dice in a singular line
+class vend:
+    def vend(username):
+        with open("json-files/random.json", "r") as file:
+            data = json.load(file)
+            items = data['vend']
+            return "pheebs sends " + username + " " + random.choice(items)

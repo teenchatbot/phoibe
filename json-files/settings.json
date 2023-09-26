@@ -52,7 +52,9 @@
         "usePing" : true,
         "useRaiseLevel" : true,
         "useAlert" : true,
-        "useDice" : true
+        "useDice" : true,
+        "useVend" : true,
+        "translateURLs" : true
 	},
     "ucalLevels" :
 	{
@@ -88,7 +90,8 @@
         "Ping" : 0,
         "raiseLevel" : 90,
         "alert" : 0,
-        "dice" : 0
+        "dice" : 0,
+        "vend" : 0
 	},
     "moderation" :
     {

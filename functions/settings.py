@@ -53,6 +53,9 @@ class funcSettings:
     useRaiseLevel = settingsdata['functionSettings']['useRaiseLevel']
     useAlert = settingsdata['functionSettings']['useAlert']
     useDice = settingsdata['functionSettings']['useDice']
+    useVend = settingsdata['functionSettings']['useVend']
+    translateURLs = settingsdata['functionSettings']['translateURLs']
+
 
 class ucalLevels:
     Help = settingsdata['ucalLevels']['Help']
@@ -86,7 +89,7 @@ class ucalLevels:
     raiseLevel = settingsdata['ucalLevels']['raiseLevel']
     alert = settingsdata['ucalLevels']['alert']
     dice = settingsdata['ucalLevels']['dice']
-
+    vend = settingsdata['ucalLevels']['vend']
 
 class keys:
     deeplKey = settingsdata['keys']['DeeplKey']

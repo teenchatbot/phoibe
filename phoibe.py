@@ -502,6 +502,28 @@ while True:
             else:
                 send_message("this command has been disabled")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+# vend
+        if ".vend" in message:
+            if settings.funcSettings.useVend is True:
+                if settings.funcSettings.useUCAL is True:
+                    if UCAL.ucal.check(username, settings.ucalLevels.vend) is True:
+                        try:
+                            com, user = message.split(" ")
+                        except ValueError:
+                            user = username
+                        send_message(Frandom.vend.vend(user))
+                    else:
+                        send_message("your ucal level is not high enough to use this command")
+                else:
+                    try:
+                        com, user = message.split(" ")
+                    except ValueError:
+                        user = username
+                    send_message(Frandom.vend.vend(user))
+            else:
+                send_message("this room has vend disabled")
+            internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
+
 # wew
         if ".wew" in message:
             if settings.funcSettings.useWew is True:
@@ -577,6 +599,11 @@ while True:
                     send_message(Frandom.dice.roll(side))
             else:
                 send_message("this command has been disabled")
+# URL translater
+        if settings.funcSettings.translateURLs:
+            if services.urls.checkIfURL(message):
+                url = services.urls.getURL(message)
+                send_message(services.urls.findURL(url))
         # have ucal add all new users
         UCAL.ucal.add(username)
     except KeyboardInterrupt():
