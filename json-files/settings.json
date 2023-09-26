@@ -53,7 +53,8 @@
         "useRaiseLevel" : true,
         "useAlert" : true,
         "useDice" : true,
-        "useVend" : true
+        "useVend" : true,
+        "translateURLs" : true
 	},
     "ucalLevels" :
 	{

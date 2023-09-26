@@ -54,6 +54,8 @@ class funcSettings:
     useAlert = settingsdata['functionSettings']['useAlert']
     useDice = settingsdata['functionSettings']['useDice']
     useVend = settingsdata['functionSettings']['useVend']
+    translateURLs = settingsdata['functionSettings']['translateURLs']
+
 
 class ucalLevels:
     Help = settingsdata['ucalLevels']['Help']

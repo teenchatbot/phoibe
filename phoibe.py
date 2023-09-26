@@ -599,6 +599,11 @@ while True:
                     send_message(Frandom.dice.roll(side))
             else:
                 send_message("this command has been disabled")
+# URL translater
+        if settings.funcSettings.translateURLs:
+            if services.urls.checkIfURL(message):
+                url = services.urls.getURL(message)
+                send_message(services.urls.findURL(url))
         # have ucal add all new users
         UCAL.ucal.add(username)
     except KeyboardInterrupt():
