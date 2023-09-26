@@ -1,7 +1,8 @@
 # this outlines stuff like alert
+import collections
 from bs4 import BeautifulSoup
 import requests
-
+collections.Callable = collections.abc.Callable
 
 class services:
     def alert():
