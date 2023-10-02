@@ -3,7 +3,7 @@ from functions import settings
 
 key = settings.keys.deeplKey
 
-class deepl:
+class tran:
     def translate(text, language):
         translator = deepl.Translator(key)
         try:
