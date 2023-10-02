@@ -227,11 +227,14 @@ while True:
 # wheelie
         if ".wheelie" in message:
             if settings.funcSettings.useWheelie is True:
-                com, com2 = message.split(" ")
-                resp = wheelie.wheelie.wheelie(com2)
-                for thing in resp:
-                    send_message(thing)
-                    time.sleep(3)
+                try:
+                    com, com2 = message.split(" ")
+                    resp = wheelie.wheelie.wheelie(com2)
+                    for thing in resp:
+                        send_message(thing)
+                        time.sleep(3)
+                except:
+                    send_message("an error has occured with your request,  please try again")
             else:
                 send_message("wheelie has been disabled (this is stupid, turn it back on)")
             internalFunctions.logs.writeToLogs("INFO - " + username + " used a command")
