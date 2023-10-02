@@ -8,6 +8,6 @@ class tran:
         translator = deepl.Translator(key)
         try:
             translation = translator.translate_text(text=text, target_lang=language)
-            return translation
+            return str(translation)
         except:
             return "An error has occured please check the available languages"
