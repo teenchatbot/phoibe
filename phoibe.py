@@ -605,8 +605,11 @@ while True:
 # URL translater
         if settings.funcSettings.translateURLs:
             if services.urls.checkIfURL(message):
-                url = services.urls.getURL(message)
-                send_message(services.urls.findURL(url))
+                try:
+                    url = services.urls.getURL(message)
+                    send_message(services.urls.findURL(url))
+                except Exception as e:
+                    send_message(str(e))
         # have ucal add all new users
         UCAL.ucal.add(username)
     except KeyboardInterrupt():
