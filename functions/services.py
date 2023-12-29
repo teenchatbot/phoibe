@@ -30,7 +30,10 @@ class urls:
         try:
             reqs = requests.get(url)
             soup = BeautifulSoup(reqs.text, 'html.parser')
-            for title in soup.find_all('title'):
-                return title.get_text()
+            try:
+                for title in soup.find_all('title'):
+                    return title.get_text()
+            except Exception as e:
+                return "an error occured when trying to retrieve the webpage"
         except:
             return "an error occured when trying to retrieve the webpage"
