@@ -6,3 +6,9 @@ please open an issue if you have one, feature requests and so on are also welcom
 ```
 https://discord.gg/sMPWUe6x9C
 ```
+# Credits
+Reid Powell (R_Powell) - Lead Developer
+MishkaVarashovsky - Senior Developer
+
+## Special Thanks To
+obiwan-66 - Faster and better startup and bulk of deleting messages function
