@@ -1,0 +1,103 @@
+{
+	"core": 
+		{
+			"username" : "",
+			"password" : "",
+            "entrances" : ["hello", "hi there", "hola"],
+            "name" : "",
+            "version" : "version 2.1.1 Hephaestus",
+            "room" : "",
+            "trustedUsers" : [""]
+		},
+	"radio" :
+		{
+			"radioURL" : "",
+			"broadcastURL" : ""
+		},
+    "keys" :
+    {
+        "DeeplKey" : ""   
+    },
+	"functionSettings" :
+	{
+		"LogChat" : true,
+        "useHelp" : true,
+        "useFilesay" : true,
+        "useReadTime" : true,
+        "useReadDate" : false,
+        "useTimez" : true,
+        "useUCAL" : true,
+        "useGetLike" : false,
+        "useGetHate" : false,
+        "useReadLike" : false,
+        "useReadHate" : false,
+        "useBacklog" : true,
+        "useAutoBacklog" : true,
+        "useTranslations" : true,
+        "useUrbandict" : true,
+        "useVote" : true,
+        "useIssues" : true,
+        "useRules" : true,
+        "useSRule" : true,
+        "useMiniMods" : true,
+        "useRegUsers" : true,
+        "useWheelie" : true,
+        "useFight" : true,
+        "useZSH" : true,
+        "useCMessages" : true,
+        "useJokes" : true,
+        "useCuss" : true,
+        "useInsults" : true,
+        "useDrink" : true,
+        "useWew" : true,
+        "usePing" : true,
+        "useRaiseLevel" : true,
+        "useAlert" : true,
+        "useDice" : true,
+        "useVend" : true,
+        "translateURLs" : true,
+        "useDeletion": true
+	},
+    "ucalLevels" :
+	{
+        "Help" : 0,
+        "Filesay" : 85,
+        "ReadTime" : 0,
+        "ReadDate" :0,
+        "Timez" : 0,
+        "UCAL" : 0,
+        "GetLike" :0,
+        "GetHate" :0,
+        "ReadLike" :0,
+        "ReadHate" :0,
+        "Backlog" : 0,
+        "AutoBacklog" : 0,
+        "Translations" : 0,
+        "Urbandict" : 0,
+        "Vote" : 0,
+        "Issues" : 0,
+        "Rules" : 0,
+        "SRule" : 0,
+        "MiniMods" : 0,
+        "RegUsers" : 0,
+        "Wheelie" : 0,
+        "Fight" : 0,
+        "ZSH" : 0,
+        "CMessages" : 0,
+        "Jokes" : 0,
+        "Cuss" : 0,
+        "Insults" : 0,
+        "Drink" : 0,
+        "Wew" : 0,
+        "Ping" : 0,
+        "raiseLevel" : 90,
+        "alert" : 0,
+        "dice" : 0,
+        "vend" : 0
+	},
+    "moderation" :
+    {
+        "triggers" : ["pm me", "hmu"],
+        "miniMods" : []
+    }
+}

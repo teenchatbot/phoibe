@@ -1,0 +1,116 @@
+{
+	"wheelie":
+	{
+		"name" : "Wheelie",
+		"description" : "The command that gives you more information on commands, DO NOT put in the period before command",
+		"usage" : "(.)wheelie [command]"
+	},
+	"ballot":
+	{
+		"name" : "ballot",
+		"description" : "Shows the canidates or options for multi option voting, gives you the canidate's username to the left of the username or option",
+		"usage" : "(.)ballot"
+	},
+	"multi-vote" :
+	{
+		"name" : "multi vote",
+		"description" : "casts votes for a certain canidate or option [YOU SHOULD TO LOOK AT BALLOT BEFOREHAND]",
+		"usage" : "(.)multi-vote [username]"
+	},
+	"srule" :
+	{
+		"name" : "srule",
+		"description" : "Displays a specific rule",
+		"usage" : "(.)srule [rule number]"
+	},
+	"gm" :
+	{
+		"name" : "good morning",
+		"description" : "tell everyone good morning",
+		"usage" : "(.gm)"
+	},
+	"disclosure" :
+	{
+		"name" : "disclosure",
+		"description" : "displays a disclosure about logging",
+		"usage" : "(.)disclosure"
+	},
+	"countvotes" :
+	{
+		"name" : "countvotes",
+		"description" : "count the votes of the current issue (this is related to but not one of the election commands)",
+		"usage" : "(.)countvotes"
+	},
+	"vote" :
+	{
+		"name" : "vote",
+		"description" : "cast a vote for the current issue (this is not castfor, please do not confuse these) takes either yay or nay as a required argument",
+		"usage" : "(.)vote [yay or nay]"
+	},
+	"issue" : 
+	{
+		"name" : "issue",
+		"description" : "displays the issue for the vote command",
+		"usage" : "(.)issue"
+	},
+	"urbandict" :
+	{
+		"name" : "urban dictionary",
+		"description" : "Ah yes, a fun one, gives you the definition for an urban dictionary term",
+		"usage" : "(.)urbandict [term]"
+	},
+	"langhelp" :
+	{
+		"name" : "langhelp",
+		"description" : "shows the languageID for the translation command",
+		"usage" : "(.)langhelp"
+	},
+	"translate" : 
+	{
+		"name" : "translate",
+		"description" : "translate any text into a language provided by langhelp",
+		"usage" : "(.)translate [text] [languageID]"
+	},
+	"joke" :
+	{
+		"name" : "joke",
+		"description" : "tells a joke",
+		"usage" : "(.)joke"
+	},
+	"whatsnew" :
+	{
+		"name" : "whatsnew",
+		"description" : "see what's new",
+		"usage" : "(.)whatsnew"
+	},
+	"alert" : 
+	{
+		"name" : "alert",
+		"description" : "shows a list of pedos and creeps",
+		"usage" : "(.)alert"
+	},
+	"melike" : 
+	{
+		"name" : "melike",
+		"description" : "tell the bot you like something",
+		"usage" : "(.)melike [something]"
+	},
+	"ilike" :
+	{
+		"name" : "ilike",
+		"description" : "tell the bot you like it - The ihate command works the exact same way",
+		"usage" : "(.)ilike [something]"
+	},
+	"drinks" :
+	{
+		"name" : "drink",
+		"description" : "[LEGACY COMMAND] send the entire chat or someone specific a drink",
+		"usage" : "(.)drinks [(optional) username]"
+	},
+	"fight" :
+	{
+		"name" : "fight",
+		"description" : "does some math based on the usernames provided and determines a winner based on a higher score",
+		"usage" : "(.)fight [username1] [username2]"
+	}
+}
