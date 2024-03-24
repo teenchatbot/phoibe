@@ -641,8 +641,11 @@ while True:
         if settings.funcSettings.useDeletion is True:
             for thing in settings.moderation.triggers:
                 if thing in message:
-                    moderation.moderator.delete_message(browser)
-                    send_message("/notice watch what you say")
+                    try:
+                        moderation.moderator.delete_message(browser)
+                        send_message("/notice watch what you say")
+                    except Exception as e:
+                        send_message("an error has occurred with deleting your message, your error is " + str(e))
     except KeyboardInterrupt():
         print("interrupt recieved")
 
