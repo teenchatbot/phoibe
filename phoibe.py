@@ -12,6 +12,10 @@ from selenium.webdriver.support.wait import WebDriverWait
 import time
 import random
 import json
+import threading
+import socket
+
+
 
 # function imports
 from functions import settings
@@ -107,7 +111,31 @@ def send_message(message):
     text_area.send_keys(message)
     browser.find_element(By.XPATH, '/html/body/div[1]/div[26]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
+# Websocket stuff
+HOST = '127.0.0.1'
+PORT = 8080
 
+def send_data(data):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((HOST, PORT))
+        try:
+            s.send(data.encode('utf-8'))
+        except Exception:
+            pass
+def data_gen():
+    while True:
+        data_to_send = acquire_data()
+        send_data(data_to_send)
+        time.sleep(1) # this is REQUIRED, I have no idea why, it just is
+def acquire_data():
+    data = data_holder[0]
+    return data
+
+data_holder = ["Phoibe:connection established"]
+
+data_thread = threading.Thread(target=data_gen())
+data_thread.daemon = True
+data_thread.start()
 
 
 
@@ -133,6 +161,8 @@ while True:
             mesBuffer = message
             print("[" + username + "]")
             print(message)
+            formattedMessage = username + ":" + message # use this format so that the client (read GUI) can easily digest the data in a better way
+            data_holder[0] = formattedMessage
 
 # commands
 

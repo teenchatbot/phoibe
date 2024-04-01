@@ -2,3 +2,4 @@ selenium
 pytz
 deepl
 newsapi
+bs4
