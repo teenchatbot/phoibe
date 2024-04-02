@@ -3,7 +3,11 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+<<<<<<< HEAD
 import json
+=======
+
+>>>>>>> origin/nightly
 
 class backlog:
     def assign(username):
@@ -62,6 +66,7 @@ class moderator:
             ActionChains(browser).move_to_element(f[-1]).click().perform()
             browser.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/a/div[2]/div').click()
             time.sleep(1)
+<<<<<<< HEAD
     def HornyScore(message):
         hornyscore = 0
         with open("json-files/naughtywords.json", "r") as file:
@@ -72,3 +77,5 @@ class moderator:
                 hornyscore = hornyscore + data[word]
 
         return hornyscore
+=======
+>>>>>>> origin/nightly

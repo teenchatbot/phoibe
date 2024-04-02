@@ -12,6 +12,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 import time
 import random
 import json
+<<<<<<< HEAD
+=======
+import threading
+import socket
+
+
+>>>>>>> origin/nightly
 
 # function imports
 from functions import settings
@@ -107,7 +114,35 @@ def send_message(message):
     text_area.send_keys(message)
     browser.find_element(By.XPATH, '/html/body/div[1]/div[26]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
+<<<<<<< HEAD
 
+=======
+# Websocket stuff
+HOST = '127.0.0.1'
+PORT = 8080
+
+def send_data(data):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((HOST, PORT))
+        try:
+            s.send(data.encode('utf-8'))
+        except Exception:
+            pass
+def data_gen():
+    while True:
+        data_to_send = acquire_data()
+        send_data(data_to_send)
+        time.sleep(1) # this is REQUIRED, I have no idea why, it just is
+def acquire_data():
+    data = data_holder[0]
+    return data
+
+data_holder = ["Phoibe:connection established"]
+
+data_thread = threading.Thread(target=data_gen())
+data_thread.daemon = True
+data_thread.start()
+>>>>>>> origin/nightly
 
 
 
@@ -133,6 +168,11 @@ while True:
             mesBuffer = message
             print("[" + username + "]")
             print(message)
+<<<<<<< HEAD
+=======
+            formattedMessage = username + ":" + message # use this format so that the client (read GUI) can easily digest the data in a better way
+            data_holder[0] = formattedMessage
+>>>>>>> origin/nightly
 
 # commands
 
@@ -639,12 +679,22 @@ while True:
         # have ucal add all new users
         UCAL.ucal.add(username)
         if settings.funcSettings.useDeletion is True:
+<<<<<<< HEAD
             if moderation.moderator.HornyScore(message) >= 100:
                 try:
                     moderation.moderator.delete_message(browser)
                     send_message("/notice your message have been removed with a HornyScore of " + str(moderation.moderator.HornyScore(message)))
                 except Exception as e:
                     send_message("an error has occurred with deleting your message, your error is " + str(e))
+=======
+            for thing in settings.moderation.triggers:
+                if thing in message:
+                    try:
+                        moderation.moderator.delete_message(browser)
+                        send_message("/notice watch what you say")
+                    except Exception as e:
+                        send_message("an error has occurred with deleting your message, your error is " + str(e))
+>>>>>>> origin/nightly
     except KeyboardInterrupt():
         print("interrupt recieved")
 
