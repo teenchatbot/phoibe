@@ -38,7 +38,7 @@ from functions import services
 
 
 opts = Options()
-opts.add_argument("--headless")
+# opts.add_argument("--headless")
 browser = webdriver.Firefox(options=opts)
 browser.get("https://y99.in/web/login/")
 a = ActionChains(browser)
@@ -133,7 +133,7 @@ def acquire_data():
 
 data_holder = ["Phoibe:connection established"]
 
-data_thread = threading.Thread(target=data_gen())
+data_thread = threading.Thread(target=data_gen)
 data_thread.daemon = True
 data_thread.start()
 
@@ -166,6 +166,18 @@ while True:
 
 # commands
 
+
+        if ".ban" in message:
+            if settings.funcSettings.useBan:
+                if UCAL.ucal.check(username, settings.ucalLevels.ban) is True:
+                    try:
+                        cmd, user = message.split(" ")
+                    except:
+                        send_message("an error has occured with banning")
+                    moderation.moderator.ban_user(user, browser)
+                    send_message("/notice " + user + " has been banned")
+                else:
+                    send_message("you naughty boy you")
 # good morning and good night
         if ".gm" in message:
             send_message("good morning sleepyhead")

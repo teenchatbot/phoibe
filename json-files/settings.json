@@ -5,7 +5,7 @@
 			"password" : "",
             "entrances" : ["hello", "hi there", "hola"],
             "name" : "",
-            "version" : "version 2.2.0 Hephaestus",
+            "version" : "version 2.3.0 Hephaestus",
             "room" : "",
             "trustedUsers" : [""]
 		},
@@ -56,7 +56,8 @@
         "useDice" : true,
         "useVend" : true,
         "translateURLs" : true,
-        "useDeletion": true
+        "useDeletion": true,
+        "useBan": true
 	},
     "ucalLevels" :
 	{
@@ -93,7 +94,8 @@
         "raiseLevel" : 90,
         "alert" : 0,
         "dice" : 0,
-        "vend" : 0
+        "vend" : 0,
+        "ban" : 90
 	},
     "moderation" :
     {

@@ -56,6 +56,7 @@ class funcSettings:
     useVend = settingsdata['functionSettings']['useVend']
     translateURLs = settingsdata['functionSettings']['translateURLs']
     useDeletion = settingsdata['functionSettings']['useDeletion']
+    useBan = settingsdata['functionSettings']['useBan']
 
 class ucalLevels:
     Help = settingsdata['ucalLevels']['Help']
@@ -90,6 +91,7 @@ class ucalLevels:
     alert = settingsdata['ucalLevels']['alert']
     dice = settingsdata['ucalLevels']['dice']
     vend = settingsdata['ucalLevels']['vend']
+    ban = settingsdata['ucalLevels']['ban']
 
 class keys:
     deeplKey = settingsdata['keys']['DeeplKey']
