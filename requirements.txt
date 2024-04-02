@@ -2,7 +2,4 @@ selenium
 pytz
 deepl
 newsapi
-<<<<<<< HEAD
-=======
 bs4
->>>>>>> origin/nightly
