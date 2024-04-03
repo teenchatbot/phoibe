@@ -38,7 +38,7 @@ from functions import services
 
 
 opts = Options()
-# opts.add_argument("--headless")
+opts.add_argument("--headless")
 browser = webdriver.Firefox(options=opts)
 browser.get("https://y99.in/web/login/")
 a = ActionChains(browser)
