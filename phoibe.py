@@ -12,13 +12,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 import time
 import random
 import json
-<<<<<<< HEAD
-=======
 import threading
 import socket
 
-
->>>>>>> origin/nightly
 
 # function imports
 from functions import settings
@@ -114,9 +110,6 @@ def send_message(message):
     text_area.send_keys(message)
     browser.find_element(By.XPATH, '/html/body/div[1]/div[26]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
 
-<<<<<<< HEAD
-
-=======
 # Websocket stuff
 HOST = '127.0.0.1'
 PORT = 8080
@@ -142,7 +135,6 @@ data_holder = ["Phoibe:connection established"]
 data_thread = threading.Thread(target=data_gen())
 data_thread.daemon = True
 data_thread.start()
->>>>>>> origin/nightly
 
 
 
@@ -168,12 +160,8 @@ while True:
             mesBuffer = message
             print("[" + username + "]")
             print(message)
-<<<<<<< HEAD
-=======
             formattedMessage = username + ":" + message # use this format so that the client (read GUI) can easily digest the data in a better way
             data_holder[0] = formattedMessage
->>>>>>> origin/nightly
-
 # commands
 
 # good morning and good night
