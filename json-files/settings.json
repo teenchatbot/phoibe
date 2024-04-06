@@ -1,7 +1,7 @@
 {
 	"core": 
 		{
-			"username" : "",
+			"username" : "foo",
 			"password" : "",
             "entrances" : ["hello", "hi there", "hola"],
             "name" : "",
