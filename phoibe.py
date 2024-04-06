@@ -163,6 +163,14 @@ while True:
             print(message)
             formattedMessage = username + ":" + message # use this format so that the client (read GUI) can easily digest the data in a better way
             data_holder[0] = formattedMessage
+# prestige
+        if settings.funcSettings.usePrestige is True:
+            prestige.prestige.prestige(username, message)
+        if ".prestige" in message:
+            if settings.funcSettings.usePrestige is True:
+                send_message(str(prestige.prestige.getPrestige(username)))
+        else:
+            send_message("prestige has been disabled")
 
 # commands
 

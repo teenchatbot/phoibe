@@ -57,7 +57,8 @@
         "useVend" : true,
         "translateURLs" : true,
         "useDeletion": true,
-        "useBan": true
+        "useBan": true,
+        "usePrestige" : true
 	},
     "ucalLevels" :
 	{

@@ -57,6 +57,7 @@ class funcSettings:
     translateURLs = settingsdata['functionSettings']['translateURLs']
     useDeletion = settingsdata['functionSettings']['useDeletion']
     useBan = settingsdata['functionSettings']['useBan']
+    usePrestige = settingsdata['functionSettings']['usePrestige']
 
 class ucalLevels:
     Help = settingsdata['ucalLevels']['Help']
