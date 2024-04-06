@@ -66,7 +66,6 @@ class moderator:
             ActionChains(browser).move_to_element(f[-1]).click().perform()
             browser.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/a/div[2]/div').click()
             time.sleep(1)
-<<<<<<< HEAD
     def HornyScore(message):
         hornyscore = 0
         with open("json-files/naughtywords.json", "r") as file:
@@ -77,5 +76,3 @@ class moderator:
                 hornyscore = hornyscore + data[word]
 
         return hornyscore
-=======
->>>>>>> origin/nightly

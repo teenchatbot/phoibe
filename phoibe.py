@@ -667,14 +667,12 @@ while True:
         # have ucal add all new users
         UCAL.ucal.add(username)
         if settings.funcSettings.useDeletion is True:
-<<<<<<< HEAD
             if moderation.moderator.HornyScore(message) >= 100:
                 try:
                     moderation.moderator.delete_message(browser)
                     send_message("/notice your message have been removed with a HornyScore of " + str(moderation.moderator.HornyScore(message)))
                 except Exception as e:
                     send_message("an error has occurred with deleting your message, your error is " + str(e))
-=======
             for thing in settings.moderation.triggers:
                 if thing in message:
                     try:
@@ -682,7 +680,6 @@ while True:
                         send_message("/notice watch what you say")
                     except Exception as e:
                         send_message("an error has occurred with deleting your message, your error is " + str(e))
->>>>>>> origin/nightly
     except KeyboardInterrupt():
         print("interrupt recieved")
 
