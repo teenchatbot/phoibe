@@ -1,11 +1,11 @@
 {
 	"core": 
 		{
-			"username" : "foo",
+			"username" : "",
 			"password" : "",
             "entrances" : ["hello", "hi there", "hola"],
             "name" : "",
-            "version" : "version 2.3.0 Hephaestus",
+            "version" : "nightly",
             "room" : "",
             "trustedUsers" : [""]
 		},
