@@ -13,4 +13,4 @@ Reid Powell (R_Powell) - Lead Developer
 MishkaVarashovsky - Senior Developer
 
 ## Special Thanks To
-obiwan-66 - Faster and better startup and bulk of deleting messages function
+obiwan-66 (RIP) - Faster and better startup and bulk of deleting messages function
