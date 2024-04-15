@@ -33,7 +33,7 @@ from functions import wheelie
 from functions import Frandom
 from functions import UCAL
 from functions import services
-
+from functions import prestige
 # selenium shit
 
 
@@ -164,13 +164,12 @@ while True:
             formattedMessage = username + ":" + message # use this format so that the client (read GUI) can easily digest the data in a better way
             data_holder[0] = formattedMessage
 # prestige
-        if settings.funcSettings.usePrestige is True:
-            prestige.prestige.prestige(username, message)
-        if ".prestige" in message:
+        prestige.prestige.prestige(username, message)
+        if message.startswith(".prestige"):
             if settings.funcSettings.usePrestige is True:
                 send_message(str(prestige.prestige.getPrestige(username)))
-        else:
-            send_message("prestige has been disabled")
+            else:
+                send_message("prestige has been disabled in this Chatroom")
 
 # commands
 
