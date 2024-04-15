@@ -163,6 +163,8 @@ while True:
             print(message)
             formattedMessage = username + ":" + message # use this format so that the client (read GUI) can easily digest the data in a better way
             data_holder[0] = formattedMessage
+        if message.startswith(".version"):
+            send_message(str(settings.core.version))
 # prestige
         prestige.prestige.prestige(username, message)
         if message.startswith(".prestige"):
