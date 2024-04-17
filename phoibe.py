@@ -137,6 +137,9 @@ data_thread = threading.Thread(target=data_gen)
 data_thread.daemon = True
 data_thread.start()
 
+# Tools
+muteChat = False
+trustedUsers = settings.core.trustedUsers
 
 
 userBuffer = settings.core.username
@@ -163,10 +166,27 @@ while True:
             print(message)
             formattedMessage = username + ":" + message # use this format so that the client (read GUI) can easily digest the data in a better way
             data_holder[0] = formattedMessage
+            prestige.prestige.prestige(username, message)
+
+            if muteChat:
+                if UCAL.ucal.check(username, 10):
+                    moderation.moderator.delete_message(browser)
+
+
         if message.startswith(".version"):
             send_message(str(settings.core.version))
+# Moderation shit
+        if message.startswith(".mute-chat"):
+            if settings.funcSettings.useModerationTools:
+                if username in trustedUsers:
+                    send_message("/notice A chat wide mute has been activated")
+                    muteChat = True
+        if message.startswith(".unmute-chat"):
+            if settings.funcSettings.useModerationTools:
+                if username in trustedUsers:
+                    send_message("/notice The chat has been unmuted")
+                    muteChat = False
 # prestige
-        prestige.prestige.prestige(username, message)
         if message.startswith(".prestige"):
             if settings.funcSettings.usePrestige is True:
                 send_message(str(prestige.prestige.getPrestige(username)))
@@ -178,7 +198,7 @@ while True:
 
         if message.startswith(".ban"):
             if settings.funcSettings.useBan:
-                if UCAL.ucal.check(username, settings.ucalLevels.ban) is True:
+                if UCAL.ucal.check(username, settings.ucalLevels.ban):
                     try:
                         cmd, user = message.split(" ")
                     except:

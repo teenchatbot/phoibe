@@ -58,7 +58,8 @@
         "translateURLs" : true,
         "useDeletion": false,
         "useBan": false,
-        "usePrestige" : true
+        "usePrestige" : true,
+        "useModerationTools": true
 	},
     "ucalLevels" :
 	{

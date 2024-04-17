@@ -58,6 +58,8 @@ class funcSettings:
     useDeletion = settingsdata['functionSettings']['useDeletion']
     useBan = settingsdata['functionSettings']['useBan']
     usePrestige = settingsdata['functionSettings']['usePrestige']
+    useModerationTools = settingsdata['functionSettings']['useModerationTools']
+
 
 class ucalLevels:
     Help = settingsdata['ucalLevels']['Help']
