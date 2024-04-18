@@ -166,9 +166,8 @@ while True:
             formattedMessage = username + ":" + message # use this format so that the client (read GUI) can easily digest the data in a better way
             data_holder[0] = formattedMessage
             prestige.prestige.prestige(username, message)
-            if UCAL.ucal.check(username, -1):
+            if UCAL.ucal.check(username, -1) == False:
                 moderation.moderator.delete_message(browser)
-                send_message("/notice " + username + " you have been muted")
 # version
         if message.startswith(".version"):
             send_message(str(settings.core.version))
