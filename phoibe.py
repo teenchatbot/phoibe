@@ -167,7 +167,7 @@ while True:
             data_holder[0] = formattedMessage
             prestige.prestige.prestige(username, message)
 
-            if muteChat:
+            if not muteChat:
                 if UCAL.ucal.check(username, 10):
                     moderation.moderator.delete_message(browser)
                     send_message("/notice the chat has been muted")
