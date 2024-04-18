@@ -167,7 +167,10 @@ while True:
             data_holder[0] = formattedMessage
             prestige.prestige.prestige(username, message)
             if UCAL.ucal.check(username, -1) == False:
-                moderation.moderator.delete_message(browser)
+                try:
+                    moderation.moderator.delete_message(browser)
+                except Exception:
+                    send_message("there was an error with muting you")
 # version
         if message.startswith(".version"):
             send_message(str(settings.core.version))
