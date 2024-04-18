@@ -1,5 +1,5 @@
 logs
 hashes
 **/__pycache__
-.venv
+.venv/
 geckodriver.log

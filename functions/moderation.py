@@ -3,11 +3,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-<<<<<<< HEAD
 import json
-=======
 
->>>>>>> origin/nightly
 
 class backlog:
     def assign(username):
@@ -76,3 +73,18 @@ class moderator:
                 hornyscore = hornyscore + data[word]
 
         return hornyscore
+    def ban_user(username, browser):
+        settingsButton = browser.find_elements(By.XPATH, '//*[@class="tooltip tooltip--left"]')
+        ActionChains(browser).move_to_element(settingsButton[2]).click().perform()
+        e = browser.find_elements(By.XPATH, '//*[@class="tabs__container"]')
+        securityButton = browser.find_element(By.XPATH, '/html/body/div[1]/div[31]/div[2]/div[1]/div[1]/div/div[1]/div/div/div[3]/a').click()
+        banButton = browser.find_element(By.XPATH, '/html/body/div[1]/div[31]/div[2]/div[1]/div[1]/div/div[2]/div[3]/div/div/div[1]/button/div').click()
+        inputField = browser.find_element(By.XPATH, '//*[@class="input-group__input"]')
+        inptFld = browser.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div[1]/div[2]/div/div[1]/input')
+        inptFld.send_keys(username)
+        time.sleep(1)
+        continueButton = browser.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div[1]/div[3]/button[2]/div').click()
+        time.sleep(1)
+        browser.find_element(By.XPATH, '//*[@class="toolbar__content"]')
+        e2 = browser.find_element(By.XPATH, '/html/body/div[1]/div[31]/div[2]/div[2]/div[1]/nav/div/button')
+        ActionChains(browser).move_to_element(e2).click().perform()

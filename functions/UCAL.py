@@ -11,7 +11,7 @@ class ucal:
                     json.dump(data, file, indent=4)
             if username in data:
                 level = data[username]
-                if level >= commandLevel:
+                if int(level) >= commandLevel:
                     return True
                 else:
                     return False
