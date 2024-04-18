@@ -5,7 +5,7 @@
 			"password" : "",
             "entrances" : ["hello", "hi there", "hola"],
             "name" : "",
-            "version" : "nightly",
+            "version" : "v2.4.0 Hephaestus",
             "room" : "",
             "trustedUsers" : [""]
 		},
