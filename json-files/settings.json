@@ -4,8 +4,8 @@
 			"username" : "",
 			"password" : "",
             "entrances" : ["hello", "hi there", "hola"],
-            "name" : "",
-            "version" : "v2.4.2 Hephaestus",
+            "name" : "phoibe",
+            "version" : "v2.4.3 Hephaestus",
             "room" : "",
             "trustedUsers" : [""]
 		},
@@ -59,7 +59,7 @@
         "useDeletion": false,
         "useBan": false,
         "usePrestige" : true,
-        "useModerationTools": true
+        "useModerationTools": false
 	},
     "ucalLevels" :
 	{

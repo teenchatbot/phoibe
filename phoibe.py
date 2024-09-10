@@ -65,19 +65,19 @@ print("past the staging page")
 
 # Get rid of the popup
 
-WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div[12]/div/div/div[3]/button[1]'))).click()
+WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div[13]/div/div/div[3]/button[1]'))).click()
 
 print("got rid of the popup")
 print("entering the chat")
 
 # lookup the room by room code
-searchRoom = WebDriverWait(browser, 2).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div[26]/div[1]/div[2]/div[9]/div/div[2]/input')))
+searchRoom = WebDriverWait(browser, 2).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div[27]/div[1]/div[2]/div[9]/div/div[2]/input')))
 searchRoom.click()
 time.sleep(.1)
 searchRoom.send_keys(settings.core.room)
 
 # enter the chatroom with the code from settings.json
-chatroom = WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div[26]/div[1]/div[2]/div[9]/div/div[3]/div[2]/div[2]/div/div[1]/div/div/div[3]/button[1]')))
+chatroom = WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div[27]/div[1]/div[2]/div[9]/div/div[3]/div[2]/div[2]/div/div[1]/div/div/div[3]/button[1]')))
 chatroom.click()
 time.sleep(.5)
 print("entered the chat")
@@ -105,10 +105,10 @@ def send_message(message):
     time.sleep(.2)
     global userBuffer
     userBuffer = settings.core.username
-    text_area = browser.find_element(By.XPATH, '/html/body/div[1]/div[26]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/textarea')
+    text_area = browser.find_element(By.XPATH, '//*[@class="chatinput input-flex-item public"]')
     text_area.click()
     text_area.send_keys(message)
-    browser.find_element(By.XPATH, '/html/body/div[1]/div[26]/div[1]/div[2]/div[8]/div[3]/div[1]/div[5]/div[2]/div/div/div[4]').click()
+    browser.find_element(By.XPATH,'//*[@class="icon send material-icons public-send-button"]').click()
 
 # Websocket stuff
 HOST = '127.0.0.1'
