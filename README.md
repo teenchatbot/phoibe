@@ -45,7 +45,7 @@ python3 phoibe.py
 ```
 # Settings
 Phoibe comes with a lot of settings to provide the user with maximum customizability 
-![Settings](https://imgur.com/a/YceWTlJ)
+![settings](https://i.imgur.com/tIXWqOh.png[/img])
 
 # Community
 ## Discord
